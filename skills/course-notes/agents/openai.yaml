@@ -1,0 +1,4 @@
+interface:
+  display_name: "课程笔记整理"
+  short_description: "将章节课件整理为完整清晰的Typora笔记，梳理知识联系、精选例题并统一管理原图"
+  default_prompt: "请使用 $course-notes 整理本章课件，尽可能保留课件组织，覆盖全部知识点，精选代表性例题，并将原图统一保存到笔记/配图/对应章节目录。"
