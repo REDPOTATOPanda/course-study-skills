@@ -4,7 +4,7 @@
 
 根据实际课件、课堂笔记和课程要求，将分散材料整理为可持续更新的学习笔记、系统连贯的课程讲义，或便于复习与开卷查阅的考试资料。
 
-**[下载最新版本](https://github.com/REDPOTATOPanda/course-textbook-builder/releases/latest)** · **[查看全部版本](https://github.com/REDPOTATOPanda/course-textbook-builder/releases)**
+**[下载最新版本](https://github.com/REDPOTATOPanda/course-study-skills/releases/latest)** · **[查看全部版本](https://github.com/REDPOTATOPanda/course-study-skills/releases)**
 
 ## 技能概览
 
@@ -46,7 +46,7 @@
 
 ### 方式一：下载发布包
 
-前往 **[Releases](https://github.com/REDPOTATOPanda/course-textbook-builder/releases/latest)**，按需下载：
+前往 **[Releases](https://github.com/REDPOTATOPanda/course-study-skills/releases/latest)**，按需下载：
 
 | 文件 | 内容 |
 |---|---|
@@ -188,7 +188,7 @@ skills/course-exam-review
 
 ## 反馈与改进
 
-欢迎通过 [Issues](https://github.com/REDPOTATOPanda/course-textbook-builder/issues) 反馈知识组织、材料解析、公式图表、排版或工具兼容性问题。
+欢迎通过 [Issues](https://github.com/REDPOTATOPanda/course-study-skills/issues) 反馈知识组织、材料解析、公式图表、排版或工具兼容性问题。
 
 建议提供所用技能、运行环境、预期结果、实际问题，以及能够复现问题的最小材料或截图。请移除不必要的个人信息，并确认提交材料可以公开分享。
 
