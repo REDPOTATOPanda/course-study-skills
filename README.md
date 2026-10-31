@@ -64,7 +64,7 @@
 下载仓库源码，或使用：
 
 ```bash
-git clone https://github.com/REDPOTATOPanda/course-textbook-builder.git
+git clone https://github.com/REDPOTATOPanda/course-study-skills.git
 ```
 
 三个技能的安装源目录分别为：
