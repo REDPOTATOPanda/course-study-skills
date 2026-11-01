@@ -2,147 +2,173 @@
 
 [English](README.md) | [简体中文](README.zh-CN.md)
 
-Agent skills for everyday course notes, coherent textbook-style handouts, and exam review. Build maintainable notes, systematic explanations, or focused review materials from actual courseware, class notes, and course requirements.
+**Scattered slides, a textbook that does not match your course, or exam materials you have no time to organize? Turn classroom materials into resources you can understand, revise from, and find your way around.**
 
-**[Latest release](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip)** · **[All releases](https://github.com/REDPOTATOPanda/course-study-skills/releases)**
+Course Study Skills provides three independent Agent Skills for turning slides, class notes, and supplementary handouts into course notes, textbook-style handouts, or exam-review materials.
+
+**[Download all skills](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip)** · **[Choose a skill](#choose-a-skill)** · **[View examples](#exam-review-examples)**
+
+## Sound familiar?
+
+### Your instructor shares slides, but the ideas still do not connect
+
+A definition is on one slide, its formula on another, and important conditions are buried in a diagram. You can follow individual pages without seeing how the topic fits together.
+
+Use **Course Notes** to organize concepts, principles, formulas, and original figures in the teaching sequence, retaining necessary explanations in Markdown notes you can keep updating.
+
+### There is a textbook, but it does not match what is actually taught
+
+Knowledge is scattered across slides, class notes, and supplementary materials. No single reference really corresponds to the course.
+
+Use **Course Textbook Builder** to compile those materials into a coherent handout, explaining relationships between topics for systematic study and long-term reference.
+
+### Exams are approaching, and your materials are hard to navigate
+
+The slides are lengthy, priorities are scattered, and a rushed summary can lose the reasoning. Even in an open-book exam, having all the files does not make the right information easy to find.
+
+Use **Course Exam Review** to organize knowledge, develop core priorities, or prepare predicted questions with reference answers around your actual exam scope and requirements.
+
+### You already have useful notes and do not want to start over
+
+New slides, supplementary explanations, and personal annotations keep accumulating. Regenerating everything can overwrite work you want to keep.
+
+All three skills support updates within a defined scope, preserving unrelated text, annotations, and images so your materials can grow with the course.
+
+## Why choose Course Study Skills?
+
+### Support learning throughout the course
+
+Everyday notes, systematic handouts, and exam-review materials serve different purposes. The three skills preserve the teaching sequence, build a knowledge structure, or organize around exam requirements. Use them independently or together as your needs change.
+
+### Retain the reasoning, not just the conclusions
+
+Definitions and formulas retain necessary assumptions, variable meanings, conceptual connections, and derivations. Look up results quickly while understanding why a method works, when it applies, and how it differs from related concepts.
+
+### Ground the material in your actual course
+
+Prioritize courseware, class notes, and instructor requirements, preserving the course's terminology and symbols. Ask about missing or conflicting materials and unclear requirements before proceeding, helping keep general knowledge aligned with what is taught.
+
+### Organize the content and its presentation together
+
+Arrange headings, contents, formulas, figures, tables, and examples for the intended use. The exam-review skill includes fixed examples for three modes and shared styles to support clear, consistent results for continuous reading and open-book lookup.
+
+### Keep improving the work you already have
+
+Organize chapter by chapter, add new materials, or revise selected passages while preserving unrelated content, annotations, and figures. Build on your work as the course progresses instead of regenerating everything each time.
+
+### Produce editable, checkable resources worth keeping
+
+Request Markdown, Word, or PDF. Check content separately from layout, including appropriate checks of formulas, figures, references, and final pagination, so materials are easier to edit, print, and archive.
 
 ## Choose a skill
 
-| Skill | Suitable use | Goal | Output |
-|---|---|---|---|
-| [course-notes](skills/course-notes/README.md) | Everyday learning and chapter updates | Preserve the teaching sequence, knowledge, and original figures | Markdown only by default; Typora-oriented |
-| [course-textbook-builder](skills/course-textbook-builder/README.md) | No suitable textbook, or teaching differs from it | Compile scattered materials into a coherent, independently readable handout | Word, PDF, or Markdown as requested |
-| [course-exam-review](skills/course-exam-review/README.md) | Review based on actual scope, priorities, and exam requirements | Organize knowledge, focus priorities, or create predicted questions and reference answers | Word, PDF, or Markdown as requested |
+| Your goal | Skill | Main result |
+|---|---|---|
+| Follow the course and turn slides into complete notes | [course-notes](skills/course-notes/README.md) | Markdown notes retaining the teaching sequence, knowledge details, and original figures |
+| Compile scattered materials into a systematic standalone handout | [course-textbook-builder](skills/course-textbook-builder/README.md) | A coherent, fully structured, consistently typeset handout |
+| Prepare review and open-book lookup materials around exam scope | [course-exam-review](skills/course-exam-review/README.md) | Organized knowledge, focused priorities, or questions with reference answers |
 
-Skills work independently or together; there is no required sequence.
+Use just the skill you need now, or take notes during the term, build a handout when needed, and prepare review materials before exams. There is no required sequence.
 
-### Everyday notes
+### Course Notes
 
-Organize chapters, supplement notes, or edit specified passages. Retain course order, hierarchy, definitions, conditions, formulas, algorithms, and useful figures while consolidating repetition. Default examples preserve original questions and existing answers, preferably as readable screenshots. Editable treatment or extra explanation requires the corresponding request. New explanatory examples require a user request or agreement. Do not automatically create course-exercise or teacher-review modules.
+For everyday coursework, chapter-by-chapter organization, and continuing updates.
 
-Course-level preferences, extraction caches, and a read-only Markdown checker support continuing updates. No unsolicited PDF preview is generated.
+Follow the course's teaching sequence and knowledge structure. Preserve definitions, principles, conditions, formulas, and useful original figures; consolidate repetition and add short connections needed for understanding. Retain existing questions and answers as requested, optionally converting them to editable content.
 
-### Textbook-style handouts
+Default output is Markdown intended for Typora. Export Word or PDF only when explicitly requested.
 
-Rebuild knowledge relationships from scattered course materials. Explain concepts, principles, methods, applicability, and necessary derivations in connected prose. Unify covers, contents, headings, formulas, figures, tables, and pagination for learning and long-term reference.
+### Course Textbook Builder
 
-Default modern textbook styling includes restrained color, professional math, a separate cover and contents, new-page chapter starts, and continuous sections. This is not the default appearance of the other two skills.
+For courses without a suitable textbook, or where the textbook has little connection to actual teaching.
 
-### Exam-review materials
+Organize scattered slides, notes, and knowledge into chapters, sections, and subsections. Explain conceptual relationships and retain necessary principles, derivations, applicability conditions, and examples to make the handout independently readable.
 
-Select one or more modes:
+Unify the cover, contents, typography, formulas, figures, tables, and pagination. Deliver Word, PDF, or Markdown as requested.
 
-- **Knowledge organization:** Chapter-based structure with knowledge needed for understanding and application.
-- **Focused core-topic review:** Explain explicit priorities with meaningful hierarchy and connected concepts/methods.
-- **Predicted questions and reference answers:** Use actual exam constraints for short-answer, calculation, multiple-choice, fill-in, and other question types.
+### Course Exam Review
 
-Ask about modes before work if unspecified. Do not invent question types, counts, marks, or another course's exam structure. Three fixed samples, editable sources, shared styles, and an optional PDF renderer support consistent compact black-and-white output. Upper-right headers do not show question ranges. Ask before compact two-column layout.
+Choose one or more modes:
 
-## Download and install
+- **Knowledge organization:** Build a chapter-based knowledge structure with what is needed for understanding and application.
+- **Focused core-topic review:** Develop explicit priorities with meaningful hierarchy, grouping concepts, principles, formulas, and method comparisons.
+- **Predicted questions and reference answers:** Prepare questions and answers according to actual exam requirements, including short-answer, calculation, multiple-choice, and fill-in formats.
 
-Current packages are maintained in [downloads/](downloads/README.md) and match this repository snapshot. Releases retain previously published historical versions.
+Confirm modes, scope, and output requirements before writing. Default to compact, clear single-column layout; choose two columns when appropriate for printing.
 
+## Get started
 
-Get [current download packages](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip):
+### 1. Download and install
 
-| Archive | Contents |
-|---|---|
-| [course-notes.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-notes.zip) | Course notes skill |
-| [course-textbook-builder.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-textbook-builder.zip) | Textbook-style handout skill |
-| [course-exam-review.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-exam-review.zip) | Exam-review skill |
-| [course-study-skills.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip) | All three skills |
+Get individual skills from the [download directory](downloads/README.md), or download the full collection.
 
-Install complete skill folders using the host's supported directory or import mechanism. Single-skill archives contain a same-named folder; the collection keeps all three under `skills/`.
+Unzip and install complete skill folders in a location supported by your agent, or use its skill import feature. Preserve `SKILL.md`, `references/`, `assets/`, `scripts/`, and other supporting resources.
 
-Alternatively, download repository source or clone:
+You can also clone the repository:
 
 ```bash
 git clone https://github.com/REDPOTATOPanda/course-study-skills.git
 ```
 
-Skill roots are `skills/course-notes`, `skills/course-textbook-builder`, and `skills/course-exam-review`. If your host supports GitHub subdirectory installation, use those paths. Preserve `SKILL.md` and all referenced resources and relative paths. Copying only the README or entrypoint may omit required resources. Installation paths, invocation syntax, and discovery depend on the host.
-
-## Usage examples
-
-> Use course-notes for this chapter. Preserve the teaching sequence, all knowledge, and useful original figures. Keep original questions and existing answers as readable screenshots.
-
-> Use course-textbook-builder to compile these slides and class notes into a systematic handout with necessary principles and examples. Deliver Word and PDF. Ask about substantive ambiguities.
-
-> Use course-exam-review for this course. First ask which modes I need, allowing multiple selections, and confirm scope, question types, and delivery requirements.
-
-> Use course-notes to add only the attachment's new material to existing notes, preserving unrelated content, annotations, and images.
-
-## Design principles
-
-**Actual teaching is primary.** Preserve notation, assumptions, and applicability from courseware, notes, and explicit teacher requirements. External supplements must be accurate and moderate, not presented as taught content.
-
-**Retain understanding and application.** Remove repetition, not definitions, principles, conditions, formulas, necessary reasoning, or relevant source examples. Avoid conclusion-only lists.
-
-**Confirm important ambiguities.** Ask about source gaps/conflicts and requirements affecting scope or output. Reuse already confirmed instructions without repeated questions.
-
-**Professional, coherent presentation.** Explain knowledge directly without repetitive source tags or process commentary. Use paragraphs for concepts, numbering for ordered steps, suitable comparison tables, and selective bolding.
-
-**Distinct purposes and styles.** Notes prioritize editability and continuing use; textbook handouts prioritize structure and systematic explanation; review materials balance reading, lookup, and printing. User templates and instructions take priority. Two-column printing is optional and must be selected.
-
-## Efficiency and quality
-
-Read only relevant chapters, passages, and detailed references. Cache extraction with source-content and parsing-setting checks; process affected parts for local updates while checking dependencies and pagination. Select parsers by input type and revisit original pages for unreliable recognition, formulas, and complex figures/tables.
-
-All three skills include gap classification, conditional coverage checks against existing questions, computational verification, concrete acceptance checks, and optional subagents. These internal measures do not expand scope, authorize new exercises, or change output defaults. The main agent remains responsible for integration and verification.
-
-The notes checker runs with Python 3 and checks common image references, heading jumps, fences, and placeholders. Mechanical checks do not prove semantic correctness. Source parsing, static review, content verification, and actual rendering are distinct; report only checks actually performed.
-
-## Languages and environment
-
-Executable instructions and references are maintained in English; each README has English and Simplified Chinese versions. Instruction language does not dictate deliverable language. Follow user language requirements and course materials; course-notes retains its Chinese-note default unless another language is requested. Chinese fixed review samples remain unchanged as visual references.
-
-The collection does not bundle models, OCR services, fonts, or typesetting engines. Required capabilities depend on the task:
-
-| Work | Capability |
-|---|---|
-| Read slides/documents | Relevant format parsers |
-| Scans or complex figures | OCR, visual reading, or page rendering |
-| Textbook/reference research | Web search |
-| Word/PDF generation | Document generation, math layout, and export |
-| Final visual inspection | Rendering/preview |
-| Notes checker | Python 3 |
-
-The optional review renderer uses Python/reportlab/svglib and Node/mathjax-full 3.x for mathematical blocks. Equivalent tools may implement the same style. MarkItDown can support extraction but does not replace checks. Complete cross-host workflows and English/Chinese behavioral equivalence are not universally verified.
-
-## Repository structure
+The three skills are located in:
 
 ```text
-.
-├── README.md
-├── README.zh-CN.md
-├── LICENSE
-├── downloads/
-└── skills/
-    ├── course-notes/
-    │   ├── SKILL.md
-    │   ├── README.md
-    │   ├── README.zh-CN.md
-    │   ├── agents/
-    │   ├── references/
-    │   └── scripts/
-    ├── course-textbook-builder/
-    │   ├── SKILL.md
-    │   ├── README.md
-    │   ├── README.zh-CN.md
-    │   └── references/
-    └── course-exam-review/
-        ├── SKILL.md
-        ├── README.md
-        ├── README.zh-CN.md
-        ├── references/
-        ├── assets/
-        └── scripts/
+skills/
+├── course-notes/
+├── course-textbook-builder/
+└── course-exam-review/
 ```
 
-READMEs serve users; `SKILL.md` is the executable entrypoint. References disclose detailed rules as needed; scripts support repeatable checks or rendering; assets contain samples and templates; agents metadata is host-specific. Resources remain within their skill so each installs independently.
+Installation locations and invocation syntax depend on your tool.
 
-## Feedback and license
+### 2. Provide materials and describe the task
 
-Use [Issues](https://github.com/REDPOTATOPanda/course-study-skills/issues) for organization, parsing, math, layout, or compatibility feedback. Include the skill, environment, expected/actual behavior, and a minimal reproduction or screenshot. Remove unnecessary personal information and share only materials you may distribute. Distinguish general rules from course-specific requests.
+Share courseware, class notes, or an existing document, and describe the scope and result you want. The agent should ask about unresolved requirements before doing work that depends on them.
 
-[MIT License](LICENSE). Courseware, textbooks, fonts, images, and other third-party resources retain their respective licensing requirements.
+**Organize course notes**
+
+> Use course-notes for chapter 3 in the attachment. Preserve the teaching sequence, all useful knowledge, and necessary original figures. Output Markdown. Retain original questions and existing answers without adding solution explanations.
+
+**Build a textbook-style handout**
+
+> Use course-textbook-builder to compile these slides and class notes into a coherent PDF handout. Explain connections between concepts and preserve necessary formulas, principles, and examples. Ask me about conflicting materials.
+
+**Prepare exam-review materials**
+
+> Use course-exam-review to combine focused core-topic review and predicted questions with reference answers into one PDF. Exam scope and instructor priorities are attached. Confirm unresolved requirements before starting.
+
+**Update existing work**
+
+> Update these notes with only the new courseware content. Preserve other text, annotations, and figures.
+
+### 3. Review and refine
+
+Request changes to specific chapters, explanation depth, example treatment, or layout. Existing documents support targeted updates without reorganizing everything.
+
+For Word/PDF output, render and inspect formulas, figures, tables, and pagination when the environment supports it, checking content separately from appearance.
+
+## Exam-review examples
+
+These examples show organization and layout for the three modes:
+
+| Example | What it demonstrates |
+|---|---|
+| [Knowledge organization](skills/course-exam-review/assets/examples/knowledge-outline.pdf) | Chapter hierarchy, conceptual explanations, formulas, and comparison tables |
+| [Focused core-topic review](skills/course-exam-review/assets/examples/core-focus.pdf) | Hierarchical development of priorities and related knowledge grouped together |
+| [Predicted questions and reference answers](skills/course-exam-review/assets/examples/questions-answers.pdf) | Chapter-grouped questions, reference answers, and procedural explanations |
+
+The examples use introductory algorithm content. Actual materials follow your course, sources, and requirements; they are not limited to that subject, question count, or length.
+
+## Environment and language
+
+Use an agent environment that can load skill instructions, read your materials, and write files. Word/PDF generation, scanned documents, and external-reference research require the corresponding document, recognition, or web capabilities. See each skill's README for dependencies.
+
+Executable instructions are in English; user guides are available in English and Simplified Chinese. **Deliverable language follows your requirements and course materials.** Course Notes defaults to a Chinese learning context.
+
+## Feedback
+
+Report issues or suggestions through [Issues](https://github.com/REDPOTATOPanda/course-study-skills/issues). Include the skill, environment, expected result, and a minimal reproduction or screenshot where possible.
+
+## License
+
+[MIT License](LICENSE). Courseware, textbooks, images, fonts, and other third-party materials retain their respective licensing requirements.
