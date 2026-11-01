@@ -100,6 +100,14 @@ Confirm modes, scope, and output requirements before writing. Default to compact
 
 ### 1. Download and install
 
+Install from the repository with the Skills CLI in a Node.js environment:
+
+```bash
+npx skills add REDPOTATOPanda/course-study-skills
+```
+
+Alternatively, download ZIP packages as described below.
+
 Get individual skills from the [latest release](https://github.com/REDPOTATOPanda/course-study-skills/releases/latest), or download the full collection.
 
 Unzip and install complete skill folders in a location supported by your agent, or use its skill import feature. Preserve `SKILL.md`, `references/`, `assets/`, `scripts/`, and other supporting resources.

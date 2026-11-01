@@ -100,6 +100,14 @@ Course Study Skills 提供三个可独立使用的 Agent Skills，帮助你将 P
 
 ### 1. 下载并安装
 
+如果已配置 Node.js，可以通过 Skills CLI 从仓库安装：
+
+```bash
+npx skills add REDPOTATOPanda/course-study-skills
+```
+
+也可以使用下方的 ZIP 压缩包方式安装。
+
 从[最新发布](https://github.com/REDPOTATOPanda/course-study-skills/releases/latest)获取所需技能，或下载全部技能合集。
 
 解压后，将完整技能文件夹安装到所用 Agent 支持的技能目录，或通过其技能导入功能加载。请保留文件夹内的 `SKILL.md`、`references/`、`assets/` 和 `scripts/` 等配套资源。
