@@ -1,49 +1,29 @@
-# Course Exam Review · 课程考试复习资料
+# Course Exam Review
 
-根据实际授课内容、教师重点和考试要求，编制专业、清晰、便于复习与开卷查阅的课程资料。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-## 三种可组合模式
+Create professional exam-review materials from courseware, class notes, teacher priorities, and exam requirements. Combine knowledge organization, focused core-topic review, and predicted questions with reference answers as requested, with clear hierarchy and support for understanding and lookup. Deliver Markdown, Word, or PDF as requested.
 
-| 模式 | 成果 |
-|---|---|
-| 知识点梳理 | 按章节组织，保留理解和应用必需的知识 |
-| 核心重点整理 | 围绕明确重点集中讲解，关联原理、方法和比较 |
-| 试题预测与参考答案 | 按实际考试要求准备简答、计算、选择、填空等题型 |
+## Usage
 
-开始前确认模式，允许多选；已经明确时不重复问。多选时确认合并还是分别交付，不自动生成全部模式。
+Install the complete `course-exam-review` folder in a skill directory supported by your agent, preserving `SKILL.md`, `references/`, `assets/`, and `scripts/` relationships. Discovery and invocation depend on the host; the skill does not require a specific model or private path.
 
-## 内容原则
+Provide course materials and specify modes, scope, exam information, and output requirements. For example:
 
-课程实际范围与最新教师要求优先，不预设五道大题、不考计算或每题必须两种方法。题型、题量、分值、答案深度等关键信息不明确时先询问，不能替用户设定。
+> Use course-exam-review to combine focused core-topic review and short-answer reference answers from the attachments into one PDF. Follow teacher-designated priorities and use one column.
 
-编题可参考与课程匹配且能够核实的权威教材；没有合适题目时根据授课内容编写，不硬套外部习题，不编造官方答案或预测概率。
+The agent must ask about unresolved key requirements. It must not select every mode automatically or assume another course's question types, marks, or exam structure. Retain existing examples within scope. New explanatory examples in knowledge/core modes require a user request or agreement. Compact two-column layout requires explicit selection.
 
-正文直接解释知识，概念题使用连贯段落，步骤题合理编号，比较可用表格。保留条件、公式和必要过程，不把答案压缩成结论清单，也不堆放来源提示与无关免责声明。
+## Consistent output style
 
-## 版式与输出
+Default to black-and-white A4, one column, and compact continuous layout. Contents is separate with right-aligned page numbers. Use clear hierarchy, paragraphs for concepts, and numbering only for actual steps. No question-range headers. Shared settings unify fonts, spacing, tables, and formulas; professional math layout leaves clearance for indices and fractions.
 
-默认 A4 竖版单栏，双栏只在用户明确要求时采用。目录独立、页码右对齐；章内自然排版，不强制每个题目另起一页。章节分页和封面等按具体要求处理，不套用教材技能的全部默认设置。
+Three fixed examples in `assets/examples/` each include a PDF and editable JSON source. They demonstrate style, not required subjects, counts, marks, or page lengths. Reading order, template usage, and acceptance are in `references/style-examples.md`.
 
-按需输出 Word、PDF 或 Markdown。内容与答案、目录页码、公式图表及最终文件分别核对，实际渲染未完成时明确说明。
+`assets/templates/compact-review.json` holds shared styles; `scripts/render_review.py` is an optional single-column PDF renderer. It requires Python 3, reportlab, svglib, and, for math blocks, Node and mathjax-full 3.x. Fonts come from local configuration; fonts and third-party runtimes are not distributed here. Equivalent tools may generate Word, Markdown, or PDF, but must implement the sample style and actual verification.
 
-## 使用示例
+## Quality and boundaries
 
-> 使用 course-exam-review 整理这门课，先询问我需要哪些模式，允许多选。
+Gap classification, existing-question coverage checks, computational verification, concrete acceptance checks, and optional collaboration improve reliability. They do not authorize expansion, automatic prediction, or course-scope changes. Check accuracy, completeness, and actual rendering separately. User templates and explicit requirements take priority.
 
-> 使用 course-exam-review，选择知识点梳理和核心重点整理，合成一个 PDF，以附件和教师重点为准。
-
-> 使用 course-exam-review，为第 2–5 章整理简答题和计算题，先确认题量、分值与答案深度，再开始编写。
-
-## 文件说明
-
-- [SKILL.md](SKILL.md)：模式确认、任务约束与完整工作流程。
-- [content.md](references/content.md)：各模式的组织、选题和答案要求。
-- [layout.md](references/layout.md)：版式、公式、目录与导出规则。
-
-本技能已进行格式与规则静态检查；这不代表已经验证所有课程、题型和运行环境。
-
-## 安装与调用
-
-将本目录作为一个完整技能安装，保留相对目录结构；不要只复制 README。安装位置与调用方式以所用运行工具的说明为准。技能入口为 [SKILL.md](SKILL.md)。
-
-文件读取、解析和导出能力由运行环境提供。无法完成的读取或检查必须如实说明，不将静态校验当作实际渲染验证。
+Fixed samples use newly written algorithm material without private user data. Fonts, engines, and environments may change line breaks and pagination; verify actual output rather than promising pixel-identical cross-platform results. English instructions do not require English deliverables; follow user language requirements and course materials.

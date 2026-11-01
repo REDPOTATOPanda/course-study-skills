@@ -1,40 +1,48 @@
-# 版式与导出
+# Layout and Export
 
-## 选用顺序
+## Priority order
 
-用户明确要求 > 用户模板或认可样稿 > 本文件默认值。默认 A4 竖版、单栏，兼顾连续阅读与打印查阅；双栏仅在明确要求时使用。横版、封面、章节另起页等会明显改变成品的选项未说明时按任务需要询问，不自动复制其他资料的特殊设计。
+Explicit user requirements > user templates or approved samples > this skill's fixed examples and shared styles > other defaults here. See [Fixed examples and shared template](style-examples.md) for examples and implementation. Default to A4 portrait, single-column, balancing continuous reading and printed lookup; use two columns only on explicit request. Ask when unspecified options such as landscape, a cover, or chapter page breaks materially change the result; do not copy special designs from other documents automatically.
 
-目录独立于正文，目标为一页，页码右对齐；使用制表位、目录域或排版工具，不手敲空格对齐。目录过长时先精简非必要层级，仍无法清晰容纳则询问是否允许多页，不用过小字体硬塞。最终页码由成品生成，不根据篇幅估算。
+Keep the contents separate from the body, targeting one page with right-aligned page numbers. Use tab stops, contents fields, or layout tools—not manually typed spaces. If too long, remove unnecessary displayed levels first; if still unreadable, ask whether multiple pages are acceptable. Do not force it into tiny type. Generate page numbers from final output rather than estimating from length.
 
-章内自然连续排版，不给每题、每节、每个知识点强制分页。允许正常跨页。标题与后文适度同页，避免整个长答案或长表格设置为不可跨页造成大片留白。章节是否另起页遵循用户要求；未指定且影响明显时确认。
+Keep sections continuous within chapters; do not force every question, section, or knowledge point onto a new page. Allow natural page flow. Keep headings with a modest amount of following text; do not make entire long answers or tables unbreakable and create large gaps. Follow the user's chapter-break instructions; confirm if unspecified and materially consequential.
 
-## 默认样式方案
+## Default style scheme
 
-以下是常见教材式复习资料方案，不是国家统一标准。输出前按实际可用字体建立命名样式，并在交付消息简要说明；正文不放制作参数。
+This is a conventional textbook-like review scheme, not a national universal standard. Establish named styles using available fonts and briefly describe them at delivery, not in the document body.
 
-| 用途 | 中文字体 | 西文与数字 | 字号与字重 |
+| Role | Chinese font | Western text/digits | Size and weight |
 |---|---|---|---|
-| 文档题名 | 黑体类 | 同族西文 | 20 pt，加粗 |
-| 章／模块标题 | 黑体类 | 同族西文 | 16 pt，加粗 |
-| 节标题／完整题目 | 黑体类 | 同族西文 | 12 pt，加粗 |
-| 小节标题 | 黑体类 | 同族西文 | 11 pt，加粗 |
-| 正文／答案 | 宋体类 | Times New Roman 或等效衬线体 | 11 pt，常规 |
-| 图表题注 | 宋体类 | 与正文西文一致 | 9.5 pt，常规 |
-| 脚注／页码 | 宋体类 | 与正文西文一致 | 9 pt，常规 |
-| 数学公式 | Cambria Math 或可用数学字体 | 数学排版字形 | 主字号约 11 pt，角标按数学规则 |
+| Document title | Hei/sans-serif family | Matching family | 20 pt, bold |
+| Chapter/module | Hei/sans-serif family | Matching family | 16 pt, bold |
+| Section/full question | Hei/sans-serif family | Matching family | 12 pt, bold |
+| Subsection | Hei/sans-serif family | Matching family | 11 pt, bold |
+| Body/answer | Song/serif family | Times New Roman or equivalent serif | 11 pt, regular |
+| Figure/table caption | Song/serif family | Same Western body family | 9.5 pt, regular |
+| Footnote/page number | Song/serif family | Same Western body family | 9 pt, regular |
+| Mathematics | Cambria Math or available math font | Mathematical glyphs | Main size about 11 pt; indices follow math rules |
 
-中英文分别指定字体，避免随意回退。中文可选宋体、思源宋体等，标题用相应黑体；替换后检查字符覆盖和字重。正文重点使用真实加粗或可靠字重，不扩大字号冒充强调。
+Specify Chinese and Western fonts separately to avoid arbitrary fallback. Songti or Source Han Serif with corresponding sans-serif headings are possible Chinese choices. Check character coverage and actual weight after substitution. Use real bold or reliable weights for body emphasis, not larger text as a substitute.
 
-建议页边距约 18–22 mm，正文约 1.3–1.4 倍行距，段后约 3–5 pt；结合公式密度微调。不要为了节省纸张把正文压成小字，或用固定过小行高裁掉上下标。长公式可独立成行，分式和多行推导允许自动增加高度。
+Start with margins around 18–22 mm, body leading about 1.3–1.4 times the font size, and 3–5 pt after paragraphs; adjust for formula density. Do not save paper through tiny body type or fixed leading that clips indices. Display long formulas separately and allow extra height for fractions and multi-line derivations.
 
-图像保持宽高比，不拉伸，不把简单放大称为高清修复。优先原始图片或可验证的矢量重绘；图注明确模型或对象，解释少量但有效。表格表头清楚，长表可跨页并重复表头。
+Preserve image aspect ratios; do not stretch or call simple enlargement high-resolution restoration. Prefer originals or verifiable vector redraws. Identify the model/object in captions with concise useful explanation. Give tables clear headers; allow long tables to split with repeated headers.
 
-如用户要求封面，采用专业克制的设计，显示真实课程名与资料类型；不虚构学校、教师或作者信息。封面与目录、正文的编号规则应明确并在输出中验证。
+If a cover is requested, use restrained professional design with the actual course name and document type. Do not invent institution, teacher, or author information. Define and verify numbering for cover, contents, and body.
 
-## 不同格式的落实
+## Implement by format
 
-- Word：使用原生段落／标题／题注样式和可编辑数学公式；源码转公式后核对分式、矩阵及上下标。目录和页码使用可更新字段。避免不必要的外部文件链接。
-- PDF：文本可检索，字体正常显示并在条件允许时嵌入；目录可链接、章节可设书签。检查真实页面、字体替换、公式溢出和截断。
-- Markdown：保留语义标题和数学源码，同时交付适合目标导出工具的字体、样式与分页设置。未导出渲染前不声称已实现字号或分页；不编造页码。
+- **Word:** Use native paragraph, heading, caption, and editable math styles/objects. Check fractions, matrices, and indices after converting source notation. Use updateable contents and page fields; avoid unnecessary external file links.
+- **PDF:** Keep text searchable and fonts displaying correctly and embedded where possible; use contents links and chapter bookmarks where supported. Check actual pages, font substitution, formula overflow, and clipping.
+- **Markdown:** Preserve semantic headings and math source, with fonts/styles/pagination settings appropriate to the export tool. Without export and rendering, do not claim final sizes or pagination or invent page numbers.
 
-有条件时逐页渲染检查，同时进行文本覆盖核对。渲染成功不等于无遗漏；文件存在也不等于版面通过验收。变更后的多种输出必须来自同一内容版本。
+When possible, render and inspect each page and separately check extracted-text coverage. Successful rendering does not prove no omissions; file existence does not mean layout acceptance. Updated multi-format outputs must share the same content version.
+
+## Visual baseline for review materials
+
+Maintain black-and-white, single-column, compact, connected reading. Group contents by chapter and use clear body hierarchy. Distinguish questions from reference-answer labels; answers primarily use paragraphs, with numbering only for real steps. Keep headers, page numbers, and separator rules restrained and consistent. Let related knowledge flow naturally; do not repeatedly break pages for module symmetry. Knowledge mode uses chapter → section → necessary subdivision; core-topic mode develops themes; question mode groups questions/answers by chapter. Sample wording, undersized type, special page numbering, or two-column layout are not universal requirements.
+
+When the user emphasizes paper-saving printing, ask whether they prefer continuous single-column or compact two-column layout. Default to single-column until selected. In two columns, retain readable text and math; span or rearrange complex tables and wide formulas rather than squash them. Deep-blue accents and designed covers are not this skill's defaults.
+
+Fixed samples retain a compact black-and-white style. Headers must not show question ranges such as “Questions X–Y.” Improve formula clearance, heading spacing, and table readability. Shared settings are in `../assets/templates/compact-review.json`; sample page counts do not constrain real documents.

@@ -1,65 +1,65 @@
-# 写作与示例规范
+# Writing and Example Guidelines
 
-以下是统一写作习惯。示例中的学科对象仅用于说明写法，不是所有课程都要讲的内容。根据知识类型选择合适模式，不把每节写成固定标签清单。
+These are shared writing conventions. Subject matter in examples illustrates writing only; it is not mandatory content for every course. Choose a suitable approach for the knowledge type rather than forcing every section into a fixed labeled checklist.
 
-## 独立呈现与简洁开头
+## Standalone presentation and concise openings
 
-成品作为独立的课程笔记阅读。章首只用简短的“本章主线”串起知识，不写来源、总页数、整理范围、截图规则或页码说明。正文直接解释概念和结论，不出现“课件第几页”“课件中提到”等导览用语；图注和图片替代文字也只描述内容。必要条件直接表述为本题或本方法的约定。少量外部补充不能冒充授课内容，可在相关段落简短标明“补充”并保留必要出处，不重复添加来源提示。内部来源映射保留在临时工作区，不复制进笔记。
+The result must read as standalone course notes. Begin each chapter with a short knowledge thread, not source details, total page counts, processing scope, screenshot policies, or pagination explanations. Explain concepts and conclusions directly. Avoid navigation phrases such as “on slide X” or “the courseware mentions.” Captions and alt text describe content only. State necessary conditions directly as assumptions of the problem or method. Small external supplements must not masquerade as taught material; briefly identify them as supplements where relevant and retain necessary attribution without repetitive source reminders. Keep source mappings in the temporary workspace, not the notes.
 
-例如可写“本章主线：函数依赖 → 范式 → 模式分解”，无需补充课件页数或整理说明。例题标签使用“例：模式分解”，答案标签使用“答案”，不写“课件原题／课件答案（pXX）”。
+For Chinese output, an opening may read “本章主线：函数依赖 → 范式 → 模式分解” without slide counts or editing explanations. Label an example “例：模式分解” and its answer “答案,” not “original slide question/answer (pXX).” Use corresponding natural labels for other requested output languages.
 
-## 从小标题还原结构
+## Recover structure from subheadings
 
-课件未列目录也可能有明确组织。看到`6.1.1 指令调度的基本方法`与`6.1.2 循环展开`时，可结合上下文识别它们通常同属第6章第1节。若后者页内还有`1. 循环展开`，应先判断是局部条目还是下一层主题，不根据数字或字号直接新增章节。没有看到上级标题时不能只凭编号猜出其名称。
+Courseware can have clear organization without an explicit contents page. For `6.1.1 Basic methods of instruction scheduling` and `6.1.2 Loop unrolling`, use context to determine whether both belong to chapter 6, section 1. If the latter slide also contains `1. Loop unrolling`, first determine whether it is a local item or a deeper topic. Do not create new sections solely from numbers or font size. Do not invent a missing parent title from numbering alone.
 
-## 概念：直觉与准确表述
+## Concepts: intuition and precision
 
-按理解需要解释解决的问题、准确含义和必要的小例子，不强制每个概念套相同模板。直观解释不能扩大定义的适用范围。简洁应减少重复，不应省略理解必需的联系；较大篇幅的补讲先询问用户。
+Explain the problem addressed, precise meaning, and necessary small examples as needed for understanding; do not force all concepts into the same template. Intuition must not broaden a definition's scope. Concision reduces repetition, not necessary connections. Ask before adding extensive remedial teaching.
 
-例如解释数据库视图：先说“把常用查询规则保存并命名”，再说明普通视图通常保存查询定义，查询时从底层表取数，而不是把某次结果固定存下来。
+For a database view, for example, start with saving and naming a frequently used query rule, then explain that an ordinary view usually stores a query definition and retrieves data from underlying tables at query time, rather than freezing a previous result.
 
-概念间存在依赖时补一句联系；使用“通常”“在本算法下”“在这些前提成立时”等限定，不能为求简洁而丢掉条件。
+Add a short connection when concepts depend on each other. Preserve qualifications such as “usually,” “under this algorithm,” and “when these assumptions hold”; do not drop conditions for brevity.
 
-## 语法与操作
+## Syntax and operations
 
-使用“通用语法 → 具体示例及注释 → 说明与易错点”的顺序。代码注释解释关键操作，避免逐行重复字面含义。指出需要的运行环境或实现差异，不宣称未运行的代码已通过测试。
+Use general syntax → concrete example with comments → explanation and pitfalls. Comments explain key operations rather than repeating every line literally. Identify required environments or implementation differences. Do not claim code passed tests if it was not run.
 
-用户单独要求注释代码时，直接处理指定代码；要求写入笔记时读取原文件并局部更新。
+If asked only to annotate code, handle that code directly. If asked to write it into notes, read the original file and update locally.
 
-## 公式与定理
+## Formulas and theorems
 
-写明符号、前提和结论。需要对照理解时可用“正式表述／帮助理解”两列表格；较长推导放在连贯段落或独立公式中，避免挤进窄表格。
+State notation, assumptions, and conclusions. A formal statement / intuitive explanation table can help comparison; place long derivations in connected prose or display equations rather than narrow table cells.
 
-特别区分充分与必要条件、样例现象与一般结论，以及算法保证和某个输入恰好具有的性质。
+Distinguish sufficient from necessary conditions, sample observations from general conclusions, and algorithm guarantees from properties that happen to hold for one input.
 
-## 例题处理选择
+## Example-treatment options
 
-默认保留原题和已有答案，优先清晰截图，不主动补充解题过程。这是可配置的默认策略，不是能力限制。用户可选择：
+By default, preserve original questions and existing answers, preferring clear screenshots; do not independently add solution reasoning. This is a configurable default, not a capability limit. The user may select:
 
-- **原题保留**：清晰的原题与原答案截图，保留已有步骤；不重复转录。
-- **可编辑整理**：在用户要求时转换为文字、数学公式、表格或代码，保持题号、数据、条件与含义。
-- **讲解增强**：在用户要求时补充思路、推导与答案解释，明确区分自主推导和原有答案，不假称材料已提供。
+- **Preserve originals:** Clear screenshots of the original question and answer, including existing steps; avoid duplicate transcription.
+- **Editable organization:** When requested, convert to text, mathematical formulas, tables, or code while preserving question numbers, data, conditions, and meaning.
+- **Enhanced explanation:** When requested, add reasoning, derivations, and answer explanations. Distinguish independent derivation from existing answers and do not claim the materials supplied it.
 
-用户未要求其他方式时沿用默认；要求含糊且会影响成果时先确认。不得用自编题替换原题；明确要求全部例题时逐题保留，不采用默认精选规则。
+Use the default unless another treatment is requested. Confirm ambiguous requirements that affect the result. Never replace original questions with invented ones. If all examples are explicitly requested, retain each instead of applying representative selection.
 
-## 算法与例题
+## Algorithms and worked examples
 
-算法知识点保留输入、输出、条件和原算法步骤，原算法有编号时保留对应关系；用简短文字说明关键含义，不默认额外编写演算示例。
+Retain algorithm inputs, outputs, conditions, and original steps; preserve correspondence with original numbering. Briefly explain key meanings, without automatically creating additional walkthroughs.
 
-例题以“课件题目 → 课件答案”的清晰截图为主，答案原有步骤一并保留。默认不另写解题思路、逐步演算、中间状态或易错点。用户明确要求讲解时再展开；解释特殊分支时，选择确实经过该分支的例子。
+Prefer clear screenshots of courseware questions followed by their answers, retaining original answer steps. Do not additionally write solution strategies, step-by-step calculations, intermediate states, or pitfalls by default. Expand when explicitly requested; when explaining a special branch, use an example that actually exercises it.
 
-同一知识点的例题按方法与关键情形精选。例如：
+Select examples for the same concept by method and important cases:
 
-- 三道只替换数值的标准题，可保留一道最清楚的题；
-- 另有一道使用不同解法或体现边界条件，应一并保留；
-- 一道被省略的题包含独有警示时，把警示整合进正文或保留该题。
+- Of three routine questions differing only in numbers, retain the clearest one.
+- Also retain a question using a different method or showing a boundary condition.
+- If an omitted question contains a unique warning, integrate the warning into the text or retain that question.
 
-数量服从知识覆盖，不机械限定每节一道或三道。共用数据放在题目前。例题一般直接接在所属知识点后，用加粗提示引出，不为每道题另建小节。截图清楚时只附简短题号或主题，不重复转录题目、答案；只有截图经合理处理仍不清晰时才按原题和原答案重新编排，保留题号、数据与条件。课件没有答案或答案有疑点时，先询问用户是否保留原题、补充求解或采用其他处理；不得擅自选定，也不默认在正文放“答案暂缺”。仅在用户同意时保留简短缺失标记。可以继续处理不受影响的部分。
+Let coverage determine the count; do not enforce one or three examples per section. Put shared data before the questions. Usually place an example immediately after its concept, introduced by bold text rather than its own subsection. If screenshots are clear, add only a short question number or topic, not duplicate transcription. Re-typeset from the original question and answer only when screenshots remain unreadable after reasonable processing; retain question numbers, data, and conditions. If answers are missing or doubtful, ask whether to retain the question, add a solution, or handle it differently. Do not choose unilaterally or insert “answer unavailable” into the text by default. Keep a short missing-content marker only with user agreement. Continue unaffected work while awaiting answers.
 
-## 图文结合
+## Integrate figures and prose
 
-先给读图所需的定义或条件，再放相关原图，并紧接图注或解读；例题需要的数据表应在题目前出现。知识点配图用简短文字解释含义，避免连续堆贴整页截图代替知识整理；例题遵循题目与答案截图优先规则，不另加解题讲解。
+Provide the definitions or conditions needed to read a figure, then the original figure and an adjacent caption or explanation. Put example data tables before the question. Briefly explain instructional figures rather than stacking full-slide screenshots as a substitute for organization. Apply screenshot-first treatment to questions and answers without adding solution explanations.
 
-## 更新保持一致
+## Consistency in updates
 
-先读同章现有笔记与相关参考，不重新设计全套样式。用户的临时微调默认只作用于其指定范围；只有明确要求今后统一采用时才更新长期默认规范。
+Read existing chapter notes and relevant references first; do not redesign the entire style. Temporary user adjustments apply only to their specified scope unless explicitly requested as future defaults.

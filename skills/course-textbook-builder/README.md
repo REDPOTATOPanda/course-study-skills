@@ -1,49 +1,54 @@
-# Course Textbook Builder · 教材式课程讲义
+# Course Textbook Builder
 
-当课程缺少指定教材，或实际授课与教材联系较弱时，将课件、课堂笔记和零散知识编写为可独立阅读、系统连贯的教材式讲义。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-## 适用情况
+When a course lacks a suitable assigned textbook or actual teaching is weakly connected to it, compile courseware, class notes, and scattered knowledge into a coherent textbook-style handout for independent study.
 
-- 材料分散，需要重建课程知识结构和概念联系。
-- 希望保留原理、条件、公式与必要推导，而不是只汇总结论。
-- 需要统一排版的讲义，供学习、复习、查阅或长期留存。
-- 已有成稿需要在指定内容权限内重新组织与排版。
+## Suitable tasks
 
-单章日常跟课笔记和试题预测通常分别使用其他技能。
+- Rebuild structure and conceptual relationships from scattered materials.
+- Retain principles, assumptions, formulas, and necessary derivations rather than conclusions alone.
+- Create consistently typeset handouts for learning, review, lookup, and long-term reference.
+- Reorganize/typeset an existing manuscript within specified editing permissions.
 
-## 工作与预期成果
+Use the corresponding collection skills for everyday chapter notes or exam prediction.
 
-先梳理材料、课程总体框架和先修关系，再按章—节—小节编写。尊重已有合理结构，不机械增加空泛导论。零散知识按照理解逻辑连接，同类方法采用一致的讲解维度。
+## Workflow and results
 
-正文保留定义、原理、变量含义、适用条件、方法流程和典型例题。必要衔接补充不能冒充教师授课；实质性扩展或材料冲突先确认。已有成稿按用户授权编辑，不擅自增删。
+Inventory materials and establish course structure and prerequisites before writing chapter → section → subsection. Respect reasonable source organization without forcing a generic introduction. Connect scattered knowledge through understanding, explaining comparable methods consistently.
 
-来源映射用于内部核对，成稿避免重复的“课件中说”、页码提示和制作说明。必要学术引用与方法局限仍保留。
+Preserve definitions, principles, variables, applicability, processes, and representative examples. Necessary supplements must not masquerade as taught content. Confirm substantive expansion or source conflicts first. Follow editing permissions for existing drafts rather than adding/deleting independently.
 
-## 版式
+Keep provenance mappings internal. Avoid repetitive source phrases, page tags, and process notes in final text; retain necessary academic references and real limitations.
 
-默认采用教材式布局：独立且适度设计的封面、独立目录和右对齐页码，每章另起页、章内自然连续，重点适度加粗，公式不裁切、图片不变形。用户模板与明确要求优先。
+## Layout
 
-Word、PDF、Markdown 按需输出，不默认生成三份。Word/PDF 应检查真实渲染，Markdown 应配合相应导出设置；没有渲染不能宣称出版效果已经验证。
+Use a separate moderately designed cover, independent contents with right-aligned pages, chapter page breaks, and continuous sections. Bold selectively; avoid clipped math and distorted figures. User templates and explicit requirements take priority.
 
-## 使用示例
+Default modern textbook style: A4 single-column, Song/serif body, sans-serif headings, restrained deep-blue accents, and consistent tables/math. Use professional math rendering for PDFs, native Word equations, and LaTeX source for Markdown. Ask before optional compact two-column printing.
 
-> 使用 course-textbook-builder，将附件编写成系统讲义，保留理解必需的原理和例题，输出 PDF；材料有矛盾时先询问。
+Deliver Word, PDF, or Markdown as requested, not all three automatically. Inspect actual Word/PDF rendering; supply Markdown export settings. Without rendering, do not claim verified publication appearance.
 
-> 使用 course-textbook-builder 整理现有 Word，只调整结构与排版，不增加或删减实质内容，同时交付 Word 和 PDF。
+## Examples
 
-## 效率与检查
+> Use course-textbook-builder to build a coherent PDF handout from the attachments, retaining principles and examples needed for understanding. Ask about source conflicts.
 
-按材料类型选择解析工具，先建全局结构再逐章读取，缓存提取结果并在材料变化后失效。多种输出尽量使用同一份核对过的内容源，避免版本不一致。
+> Reorganize/typeset this Word manuscript without adding or removing substantive content. Deliver synchronized Word and PDF files.
 
-内容覆盖、目录定位和实际页面渲染分别检查。不会把文本提取成功等同于公式准确，也不把文件能够打开等同于版面合格。
+## Efficiency and verification
 
-## 文件说明
+Choose parsers by input type. Establish global structure before reading full chapter passages, cache extraction with invalidation after changes, and use a shared checked content source for multi-format output.
 
-- [SKILL.md](SKILL.md)：材料梳理、结构设计、编写与检查流程。
-- [layout.md](references/layout.md)：字体字号、封面、目录、分页和格式实现。
+Check content coverage, lookup, and actual rendering separately. Text extraction is not proof of formula accuracy; opening a file is not layout acceptance.
 
-## 安装与调用
+Five internal measures—gap classification, conditional question-based coverage checks, computational verification, concrete acceptance, and optional subagents—must not change purpose, output format, or content permissions. They do not automatically generate questions. See [quality.md](references/quality.md).
 
-将本目录作为一个完整技能安装，保留相对目录结构；不要只复制 README。安装位置与调用方式以所用运行工具的说明为准。技能入口为 [SKILL.md](SKILL.md)。
+## Files and installation
 
-文件读取、解析和导出能力由运行环境提供。无法完成的读取或检查必须如实说明，不将静态校验当作实际渲染验证。
+- [SKILL.md](SKILL.md): Inventory, structure, writing, and verification.
+- [layout.md](references/layout.md): Fonts, cover, contents, pagination, formats, and professional math.
+- [quality.md](references/quality.md): Internal quality measures and optional collaboration.
+
+Install this complete directory and preserve relative paths. Host tools define installation and invocation; do not copy the README alone. Reading, parsing, and export capabilities come from the environment. Report unavailable checks honestly rather than equating static checks with rendering.
+
+English instructions do not prescribe English documents. Follow the user and course language requirements.

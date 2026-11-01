@@ -1,9 +1,9 @@
-# 文件与 Markdown 格式
+# Files and Markdown Formatting
 
-## 默认目录
+## Default directory structure
 
 ```text
-项目目录/
+project/
 └── 笔记/
     ├── 第X章 章节标题.md
     └── 配图/
@@ -11,19 +11,19 @@
             └── p018-结构图.png
 ```
 
-- 以完整章节标题命名，保留原编号形式，只处理非法字符，不随意加版本号。
-- 多章默认分别保存；用户要求合并时再合并。无法确定归属或交付组织方式时询问。
-- 配图统一按章节分目录；文件名可包含来源页码和语义用于内部追溯，多来源增加简短标识防冲突，不把页码显示为图注。
-- 使用相对图片路径，路径含空格时使用尖括号，例如 `![结构示意](<配图/第X章 章节标题/p018-结构图.png>)`。
-- 原图依赖箭头、图例、分组对象时截取完整语义区域，裁掉无关演示界面但不损失条件。保持比例，不把放大宣称为高清恢复。
-- 转换、提取、覆盖记录和调试材料保留在工作区，不混入最终配图目录。
-- 局部修改先读原稿；明确要求更新同章笔记时原位更新。仅上传课件且有同名文件时先保留原稿，必要时另存“章节标题-整理稿.md”并解释。
-- 未授权不迁移或删除历史图片。授权迁移后检查所有引用。
-- 能写文件时保存；用户要求聊天内 Markdown 时按要求输出。环境无法写入时提供可复制内容并说明限制。
+- Name files with full chapter titles, preserving original numbering. Handle illegal filename characters only; do not arbitrarily add version numbers.
+- Save multiple chapters separately by default; merge when requested. Ask if ownership or delivery organization is unclear.
+- Group figures by chapter. Filenames may contain source pages and semantic names for internal tracing; add short source identifiers to prevent collisions. Do not expose page numbers as captions.
+- Use relative image paths; enclose paths containing spaces in angle brackets, e.g. `![结构示意](<配图/第X章 章节标题/p018-结构图.png>)`.
+- Capture complete semantic regions when figures depend on arrows, legends, or grouped objects. Crop irrelevant presentation UI without losing conditions. Preserve aspect ratios; enlargement is not high-resolution recovery.
+- Keep conversion/extraction/coverage records and debugging files in the workspace, not final figure directories.
+- Read the original before local edits. Update in place when explicitly asked to update existing chapter notes. If only courseware is supplied and a same-named file exists, preserve it first; if needed, save “章节标题-整理稿.md” and explain.
+- Do not move or delete historical images without authorization. After authorized moves, check every reference.
+- Save files when possible. Provide Markdown in chat when requested. If writing is unavailable, provide copyable content and explain the limitation.
 
-## 标题与文本
+## Headings and text
 
-优先沿用用户模板或已有笔记；没有约定时采用：
+Prefer the user's template or existing notes. Otherwise:
 
 ```markdown
 # 第X章 章节标题
@@ -32,13 +32,17 @@
 #### 1.1.1 必要细分
 ```
 
-先判断实际知识归属再编号，不照数字机械建层级，不凑空标题。允许用原章节编号，保持整份笔记一致。章首简短串联本章主线，不堆放来源和制作说明。
+Determine actual topic ownership before numbering; do not mechanically follow digits or create empty headings. Original chapter numbering is acceptable; remain consistent throughout. Begin with a short chapter knowledge thread, not provenance or process notes.
 
-概念、关键条件与结论适度加粗；短理解提示可用引用块。比较可用表格，长推导不用窄表格。代码块标注语言，注释说明关键操作，不逐行翻译语法。表格内确需换行时可用 `<br>`，各块之间留空行。
+Bold concepts, key conditions, and conclusions selectively. Short comprehension notes may use blockquotes. Use tables for comparisons, not narrow cells for long derivations. Label code-fence languages; comments explain key operations rather than translating each line. Use `<br>` for necessary table-cell breaks and blank lines between blocks.
 
-## 公式与兼容性
+## Formulas and compatibility
 
-- 数学符号优先用 `$...$` 与 `$$...$$`，上下标用 LaTeX，例如 `R_1`、`x^2`。
-- 只有用户明确使用 Typora 时，普通文本可采用其 `~下标~`、`^上标^` 扩展，并注意相关设置与预览结果。不要假定其他阅读器支持。
-- 非例题中的表格适合时转为可编辑表格，公式尽量可编辑；例题采用所选处理方式，不重复转录清晰截图。
-- 不主动加入强制分页、出版字体设置或 Word/PDF 流程。用户要求导出时再落实格式、所需工具与实际检查，不能仅凭 Markdown 宣称最终字体或分页正确。
+- Prefer `$...$` and `$$...$$`; use LaTeX for indices, e.g. `R_1` and `x^2`.
+- Only when Typora is explicitly the target may ordinary text use `~subscript~` and `^superscript^` extensions; check settings and preview. Do not assume other readers support them.
+- Convert non-example tables to editable tables when appropriate and keep formulas editable where possible. Apply the selected treatment to examples; do not duplicate readable screenshot content.
+- Do not proactively add forced page breaks, publication font settings, or Word/PDF workflows. Implement format-specific tools, settings, and actual checks when export is requested. Markdown alone does not prove final font sizes or pagination.
+
+## Everyday note presentation baseline
+
+Output MD only by default, without a proactive PDF preview. Use chapter → topic → concept → necessary subdivisions. Keep the opening thread short, explain related concepts together, bold key phrases, compare in tables, and retain original figures. Use blockquotes for genuinely useful explanations or rules; do not turn the whole file into cards. Preserve existing headings, image paths, and annotations. Do not insert publication settings into everyday notes. Two-column layout is relevant only to requested print exports; ask before using it, without changing the continuous Markdown source structure.

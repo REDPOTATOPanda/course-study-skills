@@ -1,0 +1,9 @@
+{
+  "page_size": "A4", "margin_mm": 19,
+  "body_size": 11, "body_leading": 15.8, "paragraph_after": 3,
+  "title_size": 20, "module_size": 15, "section_size": 12, "subsection_size": 11,
+  "table_size": 10.5, "caption_size": 9.5, "header_size": 9,
+  "formula_size": 11.5, "formula_space_before": 7, "formula_space_after": 9,
+  "heading_before": 9, "heading_after": 4,
+  "text_color": "#111111", "rule_color": "#999999", "table_header_color": "#EEEEEE"
+}

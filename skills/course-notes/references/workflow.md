@@ -1,44 +1,44 @@
-# 效率与课程配置
+# Efficiency and Course Configuration
 
-## 课程级配置
+## Course-level configuration
 
-在课程项目的 `work/course-notes/config.md` 记录已确认偏好；已有等效配置时复用，不建立第二份。新建记录只包含用户明确要求和已采用的技能默认值，区分二者，不写入私人账号、其他课程习惯或推测的要求。
+Record confirmed preferences in the course project's `work/course-notes/config.md`. Reuse an equivalent existing configuration rather than creating another. New records contain only explicit user requirements and adopted skill defaults, distinguishing the two. Do not include private accounts, other-course habits, or inferred requirements.
 
-建议记录：课程与材料范围、输出位置、分章或合并方式、术语与符号约定、标题样式、例题方式、补充讲解程度、配图路径、目标阅读器，以及确认日期。尚未明确的实质性要求先询问，不能用配置文件替用户决定。
+Useful fields: course and material scope, output location, separate or merged chapters, terminology and symbols, heading style, example treatment, depth of added explanation, figure paths, target reader, and confirmation date. Ask about unresolved substantive requirements; a configuration file must not decide them for the user.
 
-每次任务先读取相关配置；本次明确要求优先。临时例外只影响当前任务，只有用户明确要求长期沿用时才更新课程默认。发现配置与当前材料或要求冲突时先确认；配置是偏好记录，不构成上传、删除或其他外部操作授权。
+Read relevant configuration at the start of each task. Current explicit requirements take priority. Temporary exceptions affect only the current task; update course defaults only when the user explicitly requests ongoing use. Confirm conflicts between configuration and current materials or requests. Configuration records preferences; it does not authorize uploads, deletions, or other external actions.
 
-不将配置放入笔记正文。无持久化能力时在本次对话记录，并说明不能跨任务复用。
+Do not put configuration in the notes. Without persistence, record it in the current conversation and explain that it cannot be reused across tasks.
 
-## 分阶段处理
+## Staged work
 
-1. 盘点材料并识别结构，确定章节、知识归属、图表和例题位置，记录覆盖关系。
-2. 按已确认结构编写正文，保留条件、推导及必要解释，控制重复。
-3. 提取或裁切相关原图，落实公式、表格和图片引用；编写时可以先取得理解所需图像，不要求等到此阶段才查看图。
-4. 核对覆盖与事实，执行机械检查并检查呈现，最后核对实际交付文件。
+1. Inventory materials and recognize structure, chapter and topic ownership, figures/tables, and example locations; record coverage mappings.
+2. Write using the confirmed structure, preserving conditions, derivations, and necessary explanations while controlling repetition.
+3. Extract or crop relevant original figures and implement formulas, tables, and image references. Obtain figures needed for understanding earlier if necessary; this is not the first permitted point to inspect images.
+4. Check coverage and facts, run mechanical checks, inspect presentation, and verify the actual delivered files.
 
-阶段用于减少返工，不是逐阶段审批。无需先制作样稿再要求用户确认；仅遇到真正影响结果的歧义时询问。
+Stages reduce rework, not establish approval gates. Do not require a sample approval before proceeding; ask only about genuine ambiguities affecting the result.
 
-## 提取缓存与增量更新
+## Extraction caches and incremental updates
 
-在 `work/course-notes/cache/` 或可持续使用的临时工作区保存提取文本、页面映射、必要原图与清单；不混入最终配图目录。按需读取章节或页段，不反复把整本材料全部载入上下文。
+Store extracted text, page mappings, necessary original figures, and manifests in `work/course-notes/cache/` or a usable persistent temporary workspace, separate from final figure directories. Read chapters or page ranges as needed instead of repeatedly loading all materials into context.
 
-清单至少记录源文件内容摘要（如 SHA-256）、转换工具及版本、影响结果的选项、输出文件清单和页码映射。只看文件名、路径或修改时间不足以判断缓存可复用。缓存缺失、损坏或指纹不一致时重新提取，不能把旧提取结果当作新版材料。
+The manifest must at least record source content fingerprints (e.g. SHA-256), converter and version, result-affecting options, output-file inventory, and page mappings. Filename, path, or modification time alone is insufficient to establish reuse. Re-extract if caches are missing, corrupt, or fingerprint-mismatched; do not treat old extraction as current source material.
 
-文件变化后：若能可靠定位受影响页面，重提取并复核相应内容；否则重提取整个来源文件。源页码偏移、章节重组或符号变化可能影响后续引用，应扩展核对范围。用户手写批注和现有笔记内容不能由缓存覆盖。
+After a file changes, re-extract and recheck affected content if changed pages can be reliably located; otherwise re-extract the whole source file. Page shifts, chapter restructuring, or notation changes may affect later references; expand verification accordingly. Never overwrite handwritten annotations or existing notes with cached output.
 
-缓存不是事实依据，源材料仍是核查对象；被裁剪图片无法表达完整条件时回看原页。不要承诺固定 token 节省比例或运行加速比例。
+Caches are not factual authorities; verify against sources. Return to the original page when a crop cannot express complete conditions. Do not promise fixed token-saving or speedup percentages.
 
-## 可选解析工具与图文取舍
+## Optional parsers and text/figure choices
 
-可使用当前环境已有的文本提取或 MarkItDown 等转换能力。先确认可用性，仅解析所需材料；MarkItDown 是微软的工具，但第三方封装的同名 skill 不自动属于微软官方。无需为了本流程强制安装任何插件。
+Use available text extraction or conversion tools such as MarkItDown. Check availability first and parse only needed materials. MarkItDown is a Microsoft tool, but a third-party skill wrapping it is not automatically an official Microsoft skill. No plugin installation is mandatory for this workflow.
 
-文本转换用于检索、覆盖和初稿组织，不证明公式、复杂表格或阅读顺序正确。重要图示、时序关系、矩阵、上下标和 OCR 结果必须结合原页面核对。使用联网 OCR 或外部服务前按环境权限与用户授权处理，不默认上传材料。
+Text conversion supports search, coverage checking, and initial organization; it does not prove formulas, complex tables, or reading order correct. Check important diagrams, temporal relationships, matrices, subscripts/superscripts, and OCR results against original pages. Follow environment permissions and user authorization before network OCR or external services; do not upload by default.
 
-正文文字、简单表格与数学表达尽量可编辑；复杂结构图、时序图和原题按已确认的规则保留清晰截图。避免全文截图后再完整抄写同一内容，但保留读图所需的简短解释。例题截图优先与用户所选方式不因工具方便而改变。
+Keep prose, simple tables, and mathematical expressions editable where possible. Preserve readable screenshots for complex structural diagrams, timing diagrams, and original questions according to confirmed policies. Avoid screenshotting everything and then fully transcribing the same material, but retain short explanations needed to interpret figures. Do not change the agreed example treatment for tool convenience.
 
-## 自动检查的边界
+## Limits of automated checks
 
-`check_notes.py` 检查常见 Markdown 内联图、引用式图与 HTML 图片的本地路径，标记远程图片未验证；检查标题级别跳跃、代码围栏闭合、常见占位标记和不同图片路径的同名文件。它不渲染 Markdown，不读取图片像素，不验证公式推导、语义层级、答案或知识覆盖。
+`check_notes.py` checks local paths for common Markdown inline images, reference-style images, and HTML images; flags remote images as unverified; and checks heading jumps, fence closure, common placeholders, and identical basenames across different image paths. It does not render Markdown, inspect image pixels, or verify derivations, semantic hierarchy, answers, or coverage.
 
-复杂 Markdown 扩展可能触发误报。检查报告只进入工作记录或交付说明，不插入笔记正文；确认问题后有针对性修复，不自动改写标题或删除内容。
+Complex Markdown extensions may trigger false positives. Keep reports in work records or delivery notes, not the note body. Fix confirmed problems specifically; do not automatically rewrite headings or delete content.

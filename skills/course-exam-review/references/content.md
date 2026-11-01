@@ -1,42 +1,46 @@
-# 内容组织与试题编写
+# Content Organization and Question Writing
 
-## 知识点梳理
+## Knowledge organization
 
-以实际课程章节为骨架，整理概念、原理、公式及变量含义、适用条件、关键过程、典型例题和易混淆区别。必要时调整局部层级，使先修概念先出现；不擅自改变课程范围或扩写成另一套教材。
+Use actual course chapters as the backbone. Organize concepts, principles, formulas and variable meanings, applicability conditions, key processes, useful examples already in the materials, and easily confused distinctions. Adjust local hierarchy when needed so prerequisite concepts appear first; do not change course scope or expand into a different textbook independently.
 
-保留原有有效知识。精简重复表达和无关说明，不删除理解和解题的必要推导。用户只允许排版时不重写知识；允许优化表述时可消除重复、纠正明确笔误，涉及实质性争议先询问。
+Retain useful original knowledge. Remove repeated wording and irrelevant explanations, not derivations required for understanding or solving problems. If only formatting is authorized, do not rewrite knowledge. If wording improvements are allowed, remove duplication and correct clear typos; ask about substantive disputes.
 
-## 核心重点整理
+## Focused core-topic review
 
-围绕教师明确重点或用户指定范围集中展开，并保留支撑重点的前置概念。把相关流程、公式、代表方法、比较与例题组织在同一处。主干完整，次要细节按用户授权取舍。
+Set modules, sections, and necessary subsections according to logical relationships among priorities. Distinguish topics, methods, conditions, steps, and local lists. Use consistent explanatory dimensions for comparable topics without forcing every topic into a full fixed set of headings. Do not collect all priorities under same-level headings.
 
-涉及技术演进时说明原有问题、继承的思想、新方法的改动及效果；涉及方法比较时选择共同维度。只有题意、教师或用户明确要求多方法时，才准备相应技术路线，不机械为每个知识点凑两种方法。
+Focus on teacher-designated priorities or user-specified scope while retaining supporting prerequisites. Group related processes, formulas, representative methods, comparisons, and existing relevant examples together. Preserve the main thread; omit secondary details only within authorization.
 
-## 试题预测与参考答案
+For technical evolution, explain the original problem, inherited ideas, changes, and effects. For comparisons, use common dimensions. Prepare multiple technical routes only when the question, teacher, or user explicitly requires them; do not force two methods for every concept.
 
-### 选题依据
+Add explanatory examples only when the user requests or explicitly accepts them. Existing source examples and question generation under a selected question mode follow their own permissions.
 
-先确定考试范围、目标和题型约束，建立内部覆盖表，避免遗漏核心主题或用重复题凑数量。未知考试结构不能套用其他课程经验；用户愿意按复习练习集处理时，以确认的范围编题，不冒充考试预测证据。
+## Predicted questions and reference answers
 
-可检索适合课程层次的权威教材，优先课程指定或教师推荐版本。核实书名、作者、版本及出版社，优先出版方、作者或高校可靠资料。借鉴确实能访问的题目和考查方式，不能仅凭书名或搜索摘要声称查阅了教材习题。没有检索能力时明确说明，不虚构搜索结果。
+### Selection basis
 
-外部题目必须与实际讲授内容、符号、假设和难度一致。适配或自主编写时保持来源表述准确；没有合适参考题时根据课程内容编题，不硬套。不要大段复制受版权保护的习题集或答案；保留必要的简洁参考出处。
+Confirm exam scope, goals, and type constraints first. Keep an internal coverage table to prevent missing core topics or padding counts with repetitive questions. Do not import another course's exam structure when unknown. If the user accepts a review exercise set instead, write within the confirmed scope without presenting it as evidence-backed exam prediction.
 
-### 题目与答案
+You may search authoritative textbooks suitable for the course level, prioritizing assigned or teacher-recommended editions. Verify title, author, edition, and publisher through publishers, authors, or reliable university sources. Borrow only questions and assessment approaches actually accessible; a book title or search excerpt is not proof its exercises were reviewed. If search is unavailable, state that honestly rather than inventing results.
 
-目录按章节或核心模块分组，可使用简短题名；正文给出完整题目与参考答案。已按章节分组时，不给每题重复附加章节备注。具体题量由用户要求决定；无法兼顾题量与范围时先说明并询问。
+External questions must match taught content, notation, assumptions, and difficulty. Describe adaptations or original questions accurately. If no suitable references exist, derive questions from the course rather than forcing external matches. Do not copy large sections of copyrighted exercise collections or answers; retain necessary concise references.
 
-答案深度依实际分值、难度和问法，不规定统一长度：
-- 定义与概念：准确界定含义，解释作用和关键特征，必要时区别相近概念。
-- 原理与方法：说明解决的问题、核心机制、输入输出、过程及适用条件。
-- 比较与演进：明确比较维度，解释差异、原因及影响。
-- 步骤题：按真实顺序编号，关键步骤说明目的，不只列名称。
-- 计算题：给出已知条件、公式、必要计算与结果，核对单位、范围及舍入。
-- 选择题：检查选项和答案，区分单选与多选；解析说明关键判断依据。
-- 填空题：提供准确答案，确有等价表达时说明可接受范围。
+### Questions and answers
 
-不要自动把所有答案排成评分点列表；评分点只有用户需要时提供。一般概念回答保持连贯段落。题目要求两种方法时分别交代原理与过程并比较，不将同一方法的换说法计作第二种。
+Group contents by chapter or core module, using short question titles where useful. Provide full questions and reference answers in the body. Once chapter-grouped, do not repeat chapter annotations for every question. Counts follow user requirements; if count and coverage cannot both be met, explain and ask.
 
-### 综合与去重
+Answer depth follows actual marks, difficulty, and wording, without fixed lengths:
+- Definitions/concepts: Define accurately, explain purpose and key features, and distinguish related concepts when needed.
+- Principles/methods: Explain the problem, mechanism, inputs/outputs, process, and applicability.
+- Comparisons/evolution: State comparison dimensions, differences, reasons, and effects.
+- Steps: Number the real sequence and explain key purposes, not just names.
+- Calculations: Give known conditions, formulas, necessary work, and results; check units, ranges, and rounding.
+- Multiple choice: Check options and answers, distinguish single/multiple selections, and explain decisive reasoning.
+- Fill-in: Give precise answers and acceptable equivalents when they genuinely exist.
 
-可把紧密相关主题合成综合题，答案应覆盖全部子问。检查合并后题号、目录和答案同步，避免重复题、无答案题或删题后残留引用。预测的依据和不确定性需要解释时放在对话中，不用冗长免责声明占用资料正文。
+Do not automatically format every answer as scoring points; provide a marking breakdown only when requested. Keep ordinary conceptual answers as connected paragraphs. If two methods are required, state principles and procedures separately and compare; two phrasings of one method do not count as two methods.
+
+### Integration and deduplication
+
+Closely related topics may form comprehensive questions, but answers must address all subquestions. Synchronize numbering, contents, and answers after merging. Avoid duplicate questions, missing answers, and references to deleted questions. Explain prediction evidence or uncertainty in conversation when needed rather than filling the document with disclaimers.

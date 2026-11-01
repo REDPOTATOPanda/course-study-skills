@@ -1,62 +1,67 @@
-# Course Notes · 课程笔记整理
+# Course Notes
 
-根据课件和补充材料，整理忠于授课主线、完整易懂、结合原图的中文 Markdown 学习笔记。默认面向 Typora，适合日常跟课、逐章复习和长期积累。
+[English](README.md) | [简体中文](README.zh-CN.md)
 
-## 适用情况
+Turn courseware and supplementary materials into complete, understandable Chinese Markdown notes following the teaching sequence and using original figures. Defaults to Typora for everyday coursework, chapter review, and long-term accumulation.
 
-- 将一章或多章 PPT、PPTX、PDF 课件整理为可读笔记。
-- 在已有笔记中补充新材料，或只修改指定内容。
-- 保留定义、条件、公式、算法和重要图示，同时合并重复讲解。
+## Suitable tasks
 
-教材式重编与考试预测分别使用合集中的其他技能。
+- Organize one or more PPT, PPTX, or PDF chapters into readable notes.
+- Add new material to existing notes or edit specified passages only.
+- Preserve definitions, conditions, formulas, algorithms, and useful figures while consolidating repetition.
 
-## 默认处理方式
+Use the other collection skills for textbook-style restructuring or exam prediction.
 
-尽可能保留授课主题、顺序与层级，不因内容未被强调就删除。文字解释简洁，但保留理解所需的联系和推导。例题按代表性精选，不能遗漏独有方法或条件；用户要求全部例题时逐题保留。
+## Defaults
 
-例题默认使用原题和已有答案的清晰截图，不主动增加解题过程。可以明确要求“可编辑整理”或“讲解增强”。重要材料缺失或答案存疑时先询问，不能自行改题或猜答案。
+Preserve topics, sequence, hierarchy, and all knowledge, including material that was not emphasized. Explain concisely without removing necessary connections and derivations. Select representative examples without omitting unique methods or conditions; retain every example if explicitly requested.
 
-配图优先使用原图，通常存放于 `笔记/配图/章节标题/`，笔记使用相对路径引用。Markdown 的可编辑性不等于所有阅读器具有相同显示效果；Typora 扩展语法按目标环境使用。
+Output Markdown only by default. Add PDF, Word, or previews only on explicit request. Do not proactively create exercise, teacher-review, predicted-topic, or new explanatory-example modules. Retain useful source examples according to the agreed treatment.
 
-## 使用示例
+Default examples use clear screenshots of original questions and existing answers without additional solution reasoning. Request editable organization or enhanced explanation explicitly. Ask about important source gaps or questionable answers; do not change questions or guess answers.
 
-> 使用 course-notes 整理本章课件，保留授课顺序、全部知识点及必要原图，例题采用默认方式。输出到本课程的笔记目录。
+Prefer original figures, usually under `笔记/配图/章节标题/`, referenced relatively. Editable Markdown does not guarantee identical rendering across readers; use Typora extensions only for that target.
 
-> 使用 course-notes 更新现有笔记，只补充附件中新增的部分，保留其他内容、批注和图片。
+## Examples
 
-> 使用 course-notes 整理这两章。每章一个 Markdown 文件，例题转成可编辑文字和公式。需要新增解题解释时先询问。
+> Use course-notes for this chapter. Retain the teaching sequence, all knowledge, and useful original figures. Apply default example treatment and save in the course's notes directory.
 
-## 效率设计
+> Update existing notes with only the new attachment content; retain other text, annotations, and figures.
 
-- 课程级配置记录已确认偏好，避免反复确认；临时要求不自动变成长期默认。
-- 提取缓存按材料内容及解析设置核验，不能仅凭文件名复用。
-- 分阶段完成结构识别、编写、图文处理和核对，无需先做小样再审批。
-- 可按环境使用 MarkItDown 等工具，重要公式和图示仍需回看原页。
+> Organize these two chapters as separate Markdown files. Convert examples into editable text/math; ask before adding new solution explanations.
 
-## 自动检查
+## Efficiency
 
-在具备 Python 3 的环境中运行：
+- Record confirmed course preferences without turning temporary requirements into permanent defaults.
+- Validate extraction caches against content and parsing settings, not filenames alone.
+- Separate structure recognition, writing, figure/format work, and review without a mandatory sample-approval gate.
+- Use available tools such as MarkItDown if suitable; check important formulas and diagrams against original pages.
+
+## Automated checks
+
+With Python 3:
 
 ```bash
-python3 scripts/check_notes.py "/path/to/第1章.md"
+python3 scripts/check_notes.py "/path/to/chapter.md"
 ```
 
-可传入多个笔记文件。脚本输出 JSON，检查常见图片路径、标题跳级、未闭合代码围栏、占位标记与图片同名冲突。无告警时退出码为 0，有需审查项时为 1；告警不一定代表错误。
+Accepts multiple notes. JSON output flags common image-path issues, heading jumps, unclosed fences, placeholders, and conflicting image basenames. Exit 0 means no warnings; exit 1 means review needed, not necessarily an error.
 
-脚本只读，不自动修改笔记，不渲染图片或公式，也不验证知识与答案。支持常见内联图、引用式图和 HTML 图片；复杂 Markdown 写法仍需人工检查。
+The script is read-only, does not render images/math, and does not verify knowledge or answers. It supports common inline/reference/HTML images; inspect complex Markdown manually. Previously tested with five constructed input groups, not all Markdown dialects or complete course workflows.
 
-## 文件说明
+## Files
 
-- [SKILL.md](SKILL.md)：入口流程与核心约束。
-- [writing-guide.md](references/writing-guide.md)：知识讲解、例题和图文组织。
-- [formatting.md](references/formatting.md)：目录、命名与 Markdown 格式。
-- [workflow.md](references/workflow.md)：课程配置、缓存及效率策略。
-- [check_notes.py](scripts/check_notes.py)：只读检查脚本。
+- [SKILL.md](SKILL.md): Entry workflow and boundaries.
+- [writing-guide.md](references/writing-guide.md): Explanations, examples, and text/figure integration.
+- [formatting.md](references/formatting.md): Paths, filenames, and Markdown conventions.
+- [workflow.md](references/workflow.md): Configuration, caching, and efficiency.
+- [quality.md](references/quality.md): Five internal quality measures.
+- [check_notes.py](scripts/check_notes.py): Read-only checks.
 
-当前脚本已用五组构造输入测试；这不等于完整课程生成或所有 Markdown 方言均已验证。
+## Installation and boundaries
 
-## 安装与调用
+Install this complete directory with relative paths intact, not just the README. Host tools define installation paths and invocation; [SKILL.md](SKILL.md) is the entrypoint.
 
-将本目录作为一个完整技能安装，保留相对目录结构；不要只复制 README。安装位置与调用方式以所用运行工具的说明为准。技能入口为 [SKILL.md](SKILL.md)。
+Parsing, reading, and export capabilities come from the environment. State unavailable checks honestly; static checks are not actual rendering validation. Gap classification, question-based checks, computation, acceptance checks, and optional subagents must not change purpose, default format, or editing permissions. Question-based checks are conditional and do not automatically generate exercises.
 
-文件读取、解析和导出能力由运行环境提供。无法完成的读取或检查必须如实说明，不将静态校验当作实际渲染验证。
+English instructions do not change the Chinese-note default or override an explicit request for another output language.

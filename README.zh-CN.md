@@ -1,0 +1,222 @@
+# Course Study Skills
+
+[English](README.md) | [简体中文](README.zh-CN.md)
+
+面向课程学习、教材式讲义编写与考试复习的 Agent Skills 合集。
+
+根据实际课件、课堂笔记和课程要求，将分散材料整理为可持续更新的学习笔记、系统连贯的课程讲义，或便于复习与开卷查阅的考试资料。
+
+**[下载最新版本](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip)** · **[查看全部版本](https://github.com/REDPOTATOPanda/course-study-skills/releases)**
+
+## 技能概览
+
+| 技能 | 适用场景 | 核心目标 | 输出形式 |
+|---|---|---|---|
+| [course-notes](skills/course-notes/README.md) | 跟随课程学习，整理课件与补充材料 | 保留授课主线，完整覆盖知识，结合原图形成学习笔记 | 默认 Markdown，面向 Typora |
+| [course-textbook-builder](skills/course-textbook-builder/README.md) | 缺少合适教材，或实际授课与教材关联较弱 | 将零散材料编写为结构完整、讲解连贯的教材式讲义 | 按需输出 Word、PDF 或 Markdown |
+| [course-exam-review](skills/course-exam-review/README.md) | 根据课程范围、教师重点和考试要求准备复习资料 | 梳理知识、集中讲解重点、编写预测题与参考答案 | 按需输出 Word、PDF 或 Markdown |
+
+三个技能可以独立使用，也可以衔接使用，不要求按固定顺序执行。
+
+## 如何选择
+
+### 日常课程笔记：course-notes
+
+适合逐章整理课件、补充已有笔记和修改指定内容。
+
+尽可能保留授课顺序与知识层级，保留必要的定义、条件、公式、算法和原图，合并重复讲解。例题默认保留原题与已有答案，优先使用清晰截图；可按要求转为可编辑内容。新增帮助理解的例题或解题讲解须用户提出或同意。
+
+支持课程级偏好记录、材料提取缓存及只读 Markdown 检查脚本，便于持续更新。
+
+### 系统课程讲义：course-textbook-builder
+
+适合将分散的课件、笔记与知识点编写成可独立阅读的教材式讲义。
+
+围绕知识之间的联系组织章节，讲清概念、原理、方法、适用条件及必要推导。支持统一封面、目录、标题、公式、图表与分页，兼顾学习、查阅和长期留存。
+
+### 考试复习资料：course-exam-review
+
+适合围绕实际考试范围和明确重点准备资料，支持三种可组合模式：
+
+- **知识点梳理**：按章节组织，保留理解与应用必需的内容。
+- **核心重点整理**：围绕明确重点集中展开，关联概念、原理与方法。
+- **试题预测与参考答案**：根据考试要求整理简答、计算、选择、填空等题型。
+
+开始前确认所需模式，允许多选。不预设题型、题量、分值，也不将某门课程的特殊要求推广到其他课程。
+
+## 当前版本的改进
+
+- 三个技能均明确创建初心与范围边界，保留五项按需质量优化。
+- course-notes 默认只交付 Markdown，不主动增加课程练习和教师复习要求。
+- course-textbook-builder 增加现代教材风与专业数学排版指导。
+- course-exam-review 增加三种模式固定样例、共享模板与可选 PDF 渲染器；页眉不显示题号范围。
+- 双栏紧凑排版先确认，用户模板与明确要求优先。
+
+## 下载与安装
+
+最新版下载包位于 [downloads/](downloads/README.md)，与当前仓库内容同步。Releases 保留已发布的历史版本。
+
+
+### 方式一：下载发布包
+
+前往 **[最新下载包](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip)**，按需下载：
+
+| 文件 | 内容 |
+|---|---|
+| [course-notes.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-notes.zip) | 课程笔记整理技能 |
+| [course-textbook-builder.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-textbook-builder.zip) | 教材式讲义编写技能 |
+| [course-exam-review.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-exam-review.zip) | 考试复习资料技能 |
+| [course-study-skills.zip](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip) | 三个技能的合集 |
+
+解压后，将所需的完整技能文件夹安装到运行工具支持的技能目录，或通过该工具的技能导入功能加载。
+
+单技能压缩包中的技能位于同名文件夹内；合集中的三个技能位于 `skills/` 目录内，可分别安装。
+
+### 方式二：从仓库获取
+
+下载仓库源码，或使用：
+
+```bash
+git clone https://github.com/REDPOTATOPanda/course-study-skills.git
+```
+
+三个技能的安装源目录分别为：
+
+```text
+skills/course-notes
+skills/course-textbook-builder
+skills/course-exam-review
+```
+
+如果运行工具支持从 GitHub 指定子目录安装，可使用仓库地址并指定对应路径。
+
+安装时请保留技能内部的 `SKILL.md`、`references/`、`scripts/` 等配套资源及其相对位置。只复制 README 或单独复制 `SKILL.md` 可能导致资源缺失。
+
+具体安装位置、调用语法和自动发现方式，以所用运行工具的说明为准。
+
+## 使用示例
+
+选择或明确调用相应技能，提供材料并说明任务即可。已经明确的要求会沿用；影响内容或交付的缺失信息应先确认。
+
+### 整理章节笔记
+
+> 使用 course-notes 整理这一章课件，尽可能保留授课顺序，完整保留知识点和必要原图，例题使用原题与已有答案的清晰截图。
+
+### 编写教材式讲义
+
+> 使用 course-textbook-builder，将这些课件与课堂笔记编写成系统讲义，讲清概念之间的联系，保留必要原理和例题，输出 Word 和 PDF。不明确的内容先询问。
+
+### 准备考试资料
+
+> 使用 course-exam-review 整理这门课的复习资料。先询问我需要哪些模式，允许多选，并确认考试范围、题型和交付方式。
+
+### 更新已有笔记
+
+> 使用 course-notes 更新现有笔记，只补充附件中的新增内容，保留其他内容、批注和图片。
+
+## 设计原则
+
+### 以实际授课材料为依据
+
+优先遵循课件、课堂笔记和教师明确要求，保留符号、前提与结论的适用范围。外部补充应准确适度，不冒充教师讲授内容。
+
+### 保留理解与应用必需的知识
+
+精简重复表达，保留定义、原理、条件、公式、必要推导和代表性例题，避免压缩成只有结论的清单。
+
+### 对重要歧义先确认
+
+材料缺失、内容冲突，以及会影响范围或成品的要求不明确时，先询问用户。已有明确约定直接沿用，不重复确认。
+
+### 保持专业、连贯的呈现
+
+正文直接陈述知识，减少重复来源提示和无关编辑说明。概念采用连贯段落，步骤合理编号，比较适当使用表格，关键内容适度加粗。
+
+### 按任务选择版式
+
+不同资料采用各自合适的排版。日常笔记侧重可编辑与持续更新；教材讲义侧重完整结构与统一版式；考试资料兼顾阅读、检索和打印。用户模板与明确要求优先。
+
+## 效率与质量检查
+
+在保证内容质量的前提下，采用以下方式减少重复处理：
+
+- 按需读取章节、页段与参考规则，避免反复加载无关材料。
+- 缓存提取结果，依据输入内容与解析设置判断是否可以复用。
+- 局部更新时处理相关内容，并检查受影响的引用、结构和分页。
+- 按材料类型选择解析工具，对公式、复杂图表和识别不可靠的部分回看原页。
+- 将机械检查与知识判断分开，集中核查概念、条件、推导和图表含义。
+
+`course-notes` 附带只读 Markdown 检查脚本，可检查常见图片路径、标题跳级、代码围栏和占位标记。
+
+材料解析、静态检查、内容核查和实际渲染属于不同环节。脚本通过不代表知识正确，文件能够打开也不代表排版合格。交付时应如实说明实际完成的检查。
+
+## 文档语言
+
+执行规范与参考文件采用英文，README提供中英文切换。指令语言不决定成品语言；笔记默认中文，其他交付按用户要求和课程材料处理。中文固定样例、样式参数和脚本保持不变。
+
+## 环境要求
+
+本项目提供技能指令、参考规范和辅助脚本，不自带模型、OCR 服务、字体或文档排版引擎。
+
+| 工作环节 | 所需能力 |
+|---|---|
+| 读取课件与文档 | 对应格式的文件解析能力 |
+| 处理扫描件或复杂图示 | OCR、图像读取或页面渲染能力 |
+| 检索教材与外部资料 | 联网检索能力 |
+| 生成 Word 或 PDF | 文档生成、数学排版与导出能力 |
+| 检查最终版面 | 对应格式的渲染或预览能力 |
+| 运行笔记检查脚本 | Python 3 |
+
+可按需使用 MarkItDown 等工具进行初步解析，但转换结果仍需核对。实际输出能力和效果取决于运行环境，不同工具之间的完整工作流程尚需分别验证。
+
+## 仓库结构
+
+```text
+.
+├── README.md
+├── LICENSE
+├── downloads/
+└── skills/
+    ├── course-notes/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   ├── agents/
+    │   ├── references/
+    │   └── scripts/
+    ├── course-textbook-builder/
+    │   ├── SKILL.md
+    │   ├── README.md
+    │   └── references/
+    └── course-exam-review/
+        ├── SKILL.md
+        ├── README.md
+        ├── references/
+        ├── assets/
+        └── scripts/
+```
+
+| 文件或目录 | 用途 |
+|---|---|
+| 根目录 `README.md` | 合集介绍、技能选择和使用指南 |
+| 各技能 `README.md` | 具体场景、用法与预期成果 |
+| `SKILL.md` | 技能入口，包含描述、流程与核心约束 |
+| `references/` | 按需读取的详细写作、排版与工作规范 |
+| `scripts/` | 可执行的辅助检查或排版工具 |
+| `assets/` | 固定样例、可编辑内容源和共享模板 |
+| `agents/` | 特定运行工具使用的界面元数据 |
+
+每个技能将必要资源保存在自身目录内，便于独立安装和维护。
+
+## 反馈与改进
+
+欢迎通过 [Issues](https://github.com/REDPOTATOPanda/course-study-skills/issues) 反馈知识组织、材料解析、公式图表、排版或工具兼容性问题。
+
+建议提供所用技能、运行环境、预期结果、实际问题，以及能够复现问题的最小材料或截图。请移除不必要的个人信息，并确认提交材料可以公开分享。
+
+改进建议应区分一般课程适用规则与某门课程的特殊要求。
+
+## 许可证
+
+本项目采用 [MIT License](LICENSE)。
+
+课件、教材、字体、图片及其他第三方资源仍遵循各自的授权要求。

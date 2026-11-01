@@ -1,53 +1,66 @@
-# 版式与格式实现
+# Layout and Format Implementation
 
-在设计样式或输出排版文件时读取本文件。它保留封面、目录、分页、重点强调和各格式的具体规则；与用户当前要求冲突时以用户要求为准。
+Read when designing styles or typesetting exports. Preserve these cover, contents, pagination, emphasis, and format-specific rules; current user instructions override conflicting defaults.
 
-## 字体、字号与版式
+## Fonts, sizes, and layout
 
-先建立完整样式表，再通过样式统一实现。模板或出版样例优先；没有模板时，可采用下面的 **A4 竖版单栏起点**，再根据内容、字体实测和打印需求调整。这是可选排版方案，不是国家统一标准。其他纸张、双栏或横版需重新评估阅读尺寸，不继承固定参数。
+Create a complete style sheet first and apply it consistently. User templates or publication samples take precedence. Otherwise use the following **A4 portrait single-column starting point**, adjusting for content, measured fonts, and printing needs. This is an optional scheme, not a national universal standard. Reassess legibility for other paper sizes, two columns, or landscape rather than inheriting fixed values.
 
-| 用途 | 中文字体 | 西文/数字字体 | 字号与字重 | 段落建议 |
-| --- | --- | --- | --- | --- |
-| 章标题 | 黑体类 | Times New Roman | 18 pt，加粗 | 前 12、后 8 pt；与随后内容同页 |
-| 节标题 | 黑体类 | Times New Roman | 14 pt，加粗 | 前 9、后 4 pt；与随后内容同页 |
-| 小节标题 | 黑体类 | Times New Roman | 12 pt，加粗 | 前 6、后 3 pt；与随后内容同页 |
-| 正文、例题正文 | 宋体类 | Times New Roman | 11 pt，常规 | 常规约 1.35 倍行距，段后 3 pt |
-| 正文重点强调 | 与正文相同的字体家族 | 与正文相同 | 与正文同字号，使用对应粗体字重 | 沿用正文段落设置，仅强调必要短语 |
-| 表格正文 | 宋体类 | Times New Roman | 10.5–11 pt，常规；表头加粗 | 根据内容自动增高 |
-| 图表题注 | 宋体类 | Times New Roman | 9.5 pt，常规 | 与图表就近；间距 3–4 pt |
-| 必要学术脚注 | 宋体类 | Times New Roman | 9 pt，常规 | 自动行高，不裁字 |
-| 页眉、页码、索引辅助信息 | 宋体类 | Times New Roman | 9 pt，常规 | 位置与基线统一 |
-| 数学公式 | 中文说明沿用正文 | Cambria Math 或兼容数学字体 | 主符号约 11 pt；变量斜体、算子正体 | 由公式高度决定行高，上下留适量空隙 |
+| Role | Chinese font | Western/digits | Size and weight | Paragraph guidance |
+|---|---|---|---|---|
+| Chapter | Hei/sans-serif | Times New Roman | 18 pt, bold | 12 pt before, 8 after; keep with following content |
+| Section | Hei/sans-serif | Times New Roman | 14 pt, bold | 9 before, 4 after; keep with following content |
+| Subsection | Hei/sans-serif | Times New Roman | 12 pt, bold | 6 before, 3 after |
+| Body/example body | Song/serif | Times New Roman | 11 pt, regular | About 1.35× leading, 3 pt after |
+| Body emphasis | Same body family | Same body family | Same size, actual corresponding bold weight | Same paragraph settings; necessary phrases only |
+| Table body | Song/serif | Times New Roman | 10.5–11 pt, regular; bold header | Automatic height |
+| Figure/table caption | Song/serif | Times New Roman | 9.5 pt, regular | Adjacent; 3–4 pt spacing |
+| Necessary academic footnote | Song/serif | Times New Roman | 9 pt, regular | Automatic height, no clipping |
+| Header/page/index aids | Song/serif | Times New Roman | 9 pt, regular | Consistent position and baseline |
+| Mathematics | Body font for Chinese explanation | Cambria Math or compatible math font | Main symbols about 11 pt; italic variables, upright operators | Height-aware leading and appropriate clearance |
 
-中文可选实际可用的宋体/Songti SC/思源宋体和黑体/Heiti SC/思源黑体；选定后全篇一致。找不到字体时选择可嵌入的替代字体并记录，不依赖静默替换。检查重点加粗是否实际渲染为对应粗体、是否仍保留清楚的主次层次；不要为强调而改换字号或随意混用字体。数学公式中的粗体可能表示向量或矩阵，不能仅为视觉强调擅自改变数学符号的字重。检查实际字重与中西文字符所用字体；字体集合（如 TTC）的默认子字体可能是粗体，不能仅凭字体文件名判定正文是常规字重。默认正文不靠缩小到 10.5 pt 以下来挤页，确有特殊版式需重新评估并说明。
+Choose actually available Chinese fonts such as Songti/Songti SC/Source Han Serif and Heiti/Heiti SC/Source Han Sans, then use them consistently. If unavailable, select and record an embeddable substitute; do not rely on silent substitution. Check that emphasis renders as the intended weight and hierarchy remains clear. Do not switch size or mix arbitrary fonts for emphasis. Bold math may denote vectors/matrices; never change symbol weight merely for visual emphasis. Check actual weights and Chinese/Western glyph fonts. TTC collections may default to a bold subfont; filenames alone do not prove regular body weight. Do not squeeze pages by reducing body text below 10.5 pt by default; reassess and explain genuinely special layouts.
 
-A4 可从四边约 18–20 mm 页边距开始，按装订需要增加内侧边距。默认制作简洁的独立课程封面；用户不需要封面或已有指定封面时遵循其要求。首行缩进、对齐方式、页眉位置及图表编号选定一种全篇遵循。合订时不仅统一页边距，还要统一模块主标题字号、基线、位置和正文起点；仅拼接已有 PDF 不算统一排版。
+Start A4 margins around 18–20 mm, increasing the inner edge for binding if needed. Provide a restrained separate course cover by default unless unwanted or already specified. Choose consistent indentation, alignment, header placement, and figure/table numbering. Combining modules requires identical heading sizes, baselines, positions, and body start points—not only margins. Joining existing PDFs alone is not unified typesetting.
 
-### 课程封面
+### Course cover
 
-- 完整讲义依次安排为“课程封面 → 独立一页的目录 → 各章正文”。局部修订已有讲义时，不无故重复增加封面。
-- 封面以课程名称为主标题，通常使用“课程讲义”作为副标题；用户明确指定开卷用途时，可使用“开卷考试课程讲义”。课程名称优先从用户要求或明确的材料标题取得；无法确定时先确认，不猜测课程名称。
-- 学校、院系、授课教师、学期、编者和版本等仅在用户提供且适合展示时使用，不从历史身份信息自动填入，不编造，不保留空字段或“待填写”。用户未提供这些信息时，课程名称与讲义副标题即可组成完整封面。
-- 封面应有适度设计感，避免只有居中标题和一条横线。可用有层次的标题区、少量协调配色、细线或色带，以及与课程内容相关的矢量图形建立构图；这些是可选手段，不要求每份封面使用相同图案或英文副标题。风格保持专业，与正文的字体家族和色彩协调，留白均衡，不堆砌装饰、口号或知识无关说明；不凭空加入校徽或机构标识。用户提供封面模板时优先沿用。
-- A4 封面主标题可从 24–28 pt 黑体类粗体起步，副标题约 14 pt，必要的附属信息约 11 pt；将实际选定值写入统一封面样式。长课程名优先合理换行，不横向压扁文字，不为填满封面随意放大字号。
-- 封面不显示页码；目录页可用罗马数字，正文从 1 起连续编号。目录条目对应正文印刷页码，PDF 尽可能设置一致的页面标签。封面独立一页，不因正反面配对增加空白页。
-- 检查封面课程名称及附属信息准确、字体实际显示正常、长标题不溢出，目录和第一章均从后续新页开始。封面留白属于封面构图，不作为章内制造大面积空白的理由。
+- Full handouts follow cover → separate one-page contents → chapters. Do not add duplicate covers to local revisions without reason.
+- Use the course name as main title, usually with a “Course Handout” subtitle; use “Open-Book Exam Course Handout” when explicitly intended. Take the course name from user instructions or unambiguous material titles; ask if uncertain rather than guessing. Render these labels naturally in the requested output language (e.g. “课程讲义”).
+- Institution, department, teacher, term, compiler, and edition appear only when supplied and appropriate. Do not fill from historical identity information, fabricate, or leave blank/to-fill fields. Course name plus subtitle is a complete cover when other information is absent.
+- Use moderate design rather than only a centered title and rule. Options include layered title areas, restrained coordinated colors, lines/bands, and course-related vector elements; no single motif or English subtitle is mandatory. Keep professional, coordinated with body fonts/colors, balanced in whitespace, and free of piled decorations, slogans, or unrelated explanations. Do not invent crests or institutional logos. Prefer supplied cover templates.
+- For A4, start main titles at 24–28 pt sans-serif bold, subtitle about 14 pt, and necessary secondary information about 11 pt. Record actual choices in cover styles. Wrap long titles naturally; do not compress horizontally or enlarge arbitrarily to fill the page.
+- No page number on the cover. Contents may use Roman numerals; body starts at 1 and continues. Contents entries refer to printed body pages; align PDF page labels where possible. Keep a separate cover without inserting blank recto/verso pairing pages.
+- Check actual course/secondary information, fonts, and long-title fit. Contents and chapter 1 begin on subsequent pages. Cover whitespace is a composition choice, not permission for large gaps inside chapters.
 
-### 分页与公式的关键规则
+### Pagination and formula rules
 
-- 目录独立一页，各章均另起新页；第一章在目录后的新页开始。无需强行从奇数页起章，不插入配对空白页。章内节、小节和知识点自然连续排版，不主动插入强制分页，不要求每部分独占一页。
-- 目录和章首的明确分页不适用于章内内容。章内允许自动跨页。不要把整个章节、长表格、长例题或连续段落设成“保持在一起”；不要连锁设置“与下段同页”，或用大段前段后距制造空白。
-- 标题只与最少的后续正文保持同页，防止孤立在页尾。短公式、图注和短例题可局部保持，内容过长则允许合理拆分、换行或跨页。
-- 含上下标、分式、矩阵的段落使用自动/最小行高，不使用会裁切公式的固定行高；公式自身的行距也要检查。普通文字行距不能直接套到多行公式上。
-- 图像按比例缩放，流程图的字体、箭头和间距协调；过宽内容优先重排或拆成有意义的部分，不强行压扁。超宽表格可另用局部横版，但不得因此给普通小节反复分页。
-- 节省纸张靠去除冗余空白、合理缩放图片和连续排版，不牺牲正文阅读尺寸或必要内容。
+- Separate one-page contents; every chapter begins on a new page, chapter 1 after contents. Do not force odd-page starts or insert pairing blanks. Sections/subsections/concepts flow naturally within chapters; do not force each part onto its own page.
+- Contents/chapter-start breaks do not apply within chapters. Allow automatic flow. Do not mark entire chapters, long tables/examples, or runs of paragraphs as keep-together. Do not chain keep-with-next or use large paragraph spacing to manufacture gaps.
+- Keep a heading with the minimum following text needed to avoid an orphan. Short formulas, captions, and examples may stay together locally; longer content may split, wrap, or cross pages sensibly.
+- For indexed expressions, fractions, and matrices, use automatic/minimum line heights, not clipping fixed heights. Check spacing inside formulas too; body leading cannot be blindly applied to multi-line math.
+- Scale images proportionally. Coordinate diagram fonts, arrows, and spacing. Rearrange/split overly wide content meaningfully rather than squash it. Locally landscape pages can serve exceptionally wide tables without causing repeated breaks for ordinary sections.
+- Save paper through removing redundant whitespace, sensible image scaling, and continuous flow—not sacrificing body legibility or necessary content.
 
-## 按输出格式落实
+## Implement by output format
 
-不限定工具或单一格式。若环境提供文档、PDF 或演示文稿专用技能，可用于实际解析、生成和验证；没有也应能按本指导选用合适工具。
+No single format/tool is mandatory. Use available document/PDF/presentation skills for parsing, generation, and verification as appropriate; otherwise choose suitable tools under this guidance.
 
-- **Word**：使用原生标题、正文、图注、表格等样式；数学表达优先生成可编辑的原生公式。设置目录后分页及章标题段前分页，节和小节不启用段前分页；目录页码采用右对齐制表位或自动目录。核对固定行高、分页符、分节符和 keep-with-next 链。更新目录与页码；避免不必要的外链域，保留必要的内部目录/页码域。
-- **PDF**：保证文本可检索、字体正确且尽可能嵌入，公式清楚、图片比例正常。核对目录独占一页、页码右对齐及每章另起新页；更新目录页码、链接和书签。若输入 PDF 无法通过简单处理实现一致版式，从内容重排，不能只加统一页眉便宣称全篇样式一致。
-- **Markdown**：使用真实标题层级、公式语法与稳定的图片路径；提供具体的导出样式/CSS或渲染配置及字体要求，包含目录独立成页、章标题另起页、节与小节不强制分页的打印规则，并落实目录页码右对齐。普通 Markdown 锚点目录不能替代打印目录的页码。只有 Markdown 源文件或样式声明时，不声称最终字体、字号及分页已验证。一般应禁止对 section/article 整块设置不跨页，章内标题不得带强制分页。
-- 多种格式同时交付时，从一致内容源生成或逐项核对；任何修改后同步所有被要求更新的成品，不能让 Word 与 PDF 内容版本错位。
+- **Word:** Native heading/body/caption/table styles and preferably editable native equations. Break after contents and before chapter headings; do not enable page-break-before for sections/subsections. Use right-aligned tabs or automatic contents. Check fixed leading, page/section breaks, and keep-with-next chains. Update contents/pages, avoid unnecessary external-link fields, and preserve necessary internal contents/page fields.
+- **PDF:** Searchable text, correct fonts embedded where possible, clear math, undistorted figures. Verify separate one-page contents, aligned numbers, and chapter starts. Update contents pages, links, and bookmarks. If existing PDFs cannot be unified simply, re-typeset content; adding uniform headers alone does not establish consistency.
+- **Markdown:** Real heading hierarchy, math syntax, stable image paths. Provide explicit export CSS/styles or renderer configuration and font requirements, including separate contents, chapter breaks, and no forced section/subsection breaks. Implement right-aligned printed contents numbers; anchor-only Markdown contents is not a substitute. Source/styles alone do not establish final fonts, sizes, or pagination. Generally do not keep entire section/article containers unbreakable; intra-chapter headings must not force breaks.
+- For requested multi-format delivery, generate from consistent source or verify item by item. Synchronize all requested outputs after changes; do not leave mismatched Word/PDF content versions.
 
+## Modern textbook style: default visual scheme
+
+Without a user template, adopt modern textbook styling while retaining the complete style roles and chapter-break rules above. A4 portrait, one column, Song/serif body at 11 pt with compatible Western serif text; sans-serif chapter headings 18–19 pt, sections 13–14 pt, subsections 11–12 pt. Black body, low-saturation deep-blue headings and a few rules (e.g. #183D59), supported by pale gray-blue (e.g. #EDF3F6). Colors are adjustable starting points and must remain distinguishable in grayscale. Use about 1.4–1.5× body leading and 3–5 pt after paragraphs, adjusted to actual fonts; do not shrink body type to squeeze pages.
+
+Express hierarchy through size, weight, and measured spacing. Put necessary captions next to figures/tables. Tables use clear headers and thin horizontal rules with fewer vertical/heavy borders. Do not make the whole handout into cards. Covers may combine layered titles, restrained color blocks, and course-related vector elements rather than only a centered title/rule. Use only actual supplied course information.
+
+### Professional mathematical typography
+
+Complex formulas must use a mathematical typesetting engine. Prefer XeLaTeX/LuaLaTeX suited to Chinese PDFs; with an existing HTML route or no TeX environment, MathJax may render LaTeX as vectors. Do not replace an otherwise usable workflow just for a tool name or force large dependencies on users. Use editable native OMML equations for Word and preserve LaTeX math source in Markdown. Do not simulate fractions, sums, matrices, or extensible delimiters with plain text and manual indices.
+
+Unify inline/display math fonts and about 11–12 pt main size. Italicize variables; keep function names and explanatory subscripts upright. Set vector/matrix weights by meaning, not decoration. Check height, baseline, spacing, line breaks, and clearance for fractions/indices. Vector paths may be clear but not searchable/copyable; retain editable source and state this honestly rather than calling vectors editable equations. Report the actual engine; do not call MathJax XeLaTeX.
+
+Compact two-column layout is optional for printing: ask first, keeping one column if unselected. Actual rendering, contents, and pagination checks remain required; listing style parameters alone is insufficient.

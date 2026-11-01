@@ -1,58 +1,74 @@
 ---
 name: course-exam-review
-description: 根据课程课件、课堂笔记、教师重点和考试要求，编制专业的课程考试复习资料。支持知识点梳理、核心重点整理、试题预测与参考答案三种可组合模式，兼顾理解、应用与开卷查阅，按需输出 Word、PDF 或 Markdown。适用于期末复习资料制作与更新；单个概念问答、完整教材编写或单纯逐页摘录不必启用。
+description: Build professional course exam-review materials from courseware, class notes, teacher priorities, and exam requirements. Supports three combinable modes—knowledge organization, focused core-topic review, and predicted questions with reference answers—for understanding, application, and open-book lookup. Output Word, PDF, or Markdown as requested. Use for creating or updating exam-review materials, not isolated concept questions, full textbook writing, or slide-by-slide transcription.
 ---
 
-# 课程考试复习资料
+# Course Exam Review
 
-## 入口：先确认任务
+## Original purpose and non-negotiable boundaries
 
-开始整理前先确认用户需要哪些模式，允许多选：
-- 知识点梳理：按章节组织，保留理解与应用所必需的知识。
-- 核心重点整理：围绕明确重点集中讲解，减少分散查找。
-- 试题预测与参考答案：依考试要求组织简答、计算、选择、填空等题型。
+Prepare professional review materials grounded in the actual course and exam requirements. The user selects knowledge organization, focused core-topic review, and/or predicted questions with reference answers. If not specified, ask about modes and substantive requirements first; do not fill in modes, question types, counts, or marks for the user. Conditions invented for a simulated test are not real user preferences and do not establish that the requirement-elicitation flow was tested.
 
-如果用户已明确选择，直接记录，不重复提问；否则先询问并等待答复，不自行选模式，也不默认全部生成。多选后确认希望合并成一本还是分别交付，除非用户已说明。
+Knowledge organization preserves chapter structure. Focused review uses meaningful chapter/module → theme → specific-knowledge hierarchy, grouping concepts, principles, conditions, formulas, and distinctions rather than presenting everything at the same heading level. Question mode follows actual scope, wording, and marks rather than replacing organization with a fixed answer template.
 
-集中询问会实质改变结果的缺失要求：课程与材料范围、重点依据、所选模式的详细要求、内容增删权限、输出格式与用途。预测模式还需确认已知题型、数量或覆盖目标、分值和难度；用户表示不知道时，询问其接受的处理方式，不擅自设定考试结构。
+Retain existing source examples within scope and content permissions. In knowledge/core-topic modes, add new explanatory examples only when requested to aid understanding or explicitly accepted. Selecting question mode authorizes questions and answers within its confirmed scope; these permissions are distinct.
 
-已有要求沿用，不反复确认。对不明确且影响内容或交付的事项先问用户，不能将个人推断当成要求。确认前可盘点材料和检查可读性，但不开展依赖该答案的编写。明确的约束与本技能的版式默认值可直接执行；无需逐项询问常规技术实现。
+Follow the user's approved professional review style: black-and-white, single-column, connected prose, clear hierarchy by default. Ask before compact two-column layout; do not automatically adopt textbook-style covers, blue accents, or chapter page breaks. The five quality improvements are internal checks and efficiency measures, not permission to expand scope, add unsolicited question sets, or change modes.
 
-## 材料与依据
+The English language of this skill does not prescribe English deliverables. Follow the user's requested output language and course materials, retaining their terminology and notation. Chinese reference samples illustrate Chinese typography, not a requirement to translate other courses into Chinese.
 
-以实际授课材料和最新教师要求为主，结合用户笔记。先检查文件是否可访问、完整、可解析；不能声称读过未访问的资料。记录已读取范围。
+## Entry: confirm the task first
 
-建立内部材料清单及“章节—知识点—来源—纳入位置”对应关系，跟踪遗漏、重复、矛盾和更新。可用现有解析工具提取文本；公式、图表、层级和扫描页应回看原图。转换为文本不等于准确理解或保留版面。只读取当前阶段需要的材料，可缓存提取结果；输入修改后重新核对相关内容。
+Before organizing materials, confirm the required modes; multiple selections are allowed:
+- **Knowledge organization:** Organize by chapter, preserving what is needed for understanding and application.
+- **Focused core-topic review:** Explain explicit priorities together and reduce scattered lookup.
+- **Predicted questions with reference answers:** Organize short-answer, calculation, multiple-choice, fill-in, or other types according to exam requirements.
 
-重要性依教师明确重点、考试范围、课程核心目标与知识依赖综合判断，不仅凭篇幅或出现次数。区分明确重点与编者预测，不杜撰教师意图、押题概率或官方答案。不要把某门课的五道题、每题二十分、不考计算、两种方法等要求迁移到其他课程。
+If already selected, record the choice and proceed without asking again. Otherwise ask and wait; do not select modes independently or generate all modes by default. For multiple modes, confirm whether to combine or deliver separately unless already specified.
 
-材料缺失、冲突或关键符号含糊时，在对话中说明具体问题并询问处理方式。不要静默猜测，也不要把未解决的“待核对”留在正式成品中。可继续整理不受影响的部分。
+Ask together about missing requirements that materially change the result: course/material scope, basis for priorities, mode-specific details, editing permissions, output format, and use. For prediction mode, confirm known question types, count or coverage target, marks, and difficulty. If unknown, ask which handling the user accepts rather than inventing an exam structure.
 
-## 编写与组织
+Reuse established requirements without repeated confirmation. Ask about ambiguities affecting content or delivery; do not substitute personal assumptions. Before the answer, inventory readable materials but do not write content dependent on it. Explicit constraints and applicable layout defaults may be executed directly; do not ask about every routine implementation detail.
 
-确认模式后读取 [内容与试题编写](references/content.md)，只执行用户选择的模式。
+## Materials and evidence
 
-按课程章节或明确重点模块组织，准确命名标题，把相关定义、原理、条件、公式、例题与比较放在一起。保留理解与解题需要的联系，不压缩成只有结论的提纲，不以机械逐页摘录代替组织。
+Use actual teaching materials and latest teacher requirements as primary sources, together with user notes. Check access, completeness, and parseability; do not claim unread materials were reviewed. Record the read scope.
 
-用专业、连贯、直接的语言陈述知识。概念性答案优先用段落；真正具有顺序的步骤使用编号，比较可用表格。关键概念、条件和结论适度加粗，不整段加粗，不给每个句子加序号。
+Maintain an internal inventory and chapter → knowledge → source → destination mapping to track omissions, repetitions, conflicts, and updates. Extract text with available tools; revisit original figures for formulas, diagrams, hierarchy, and scans. Text conversion is not proof of accurate understanding or preserved layout. Read materials relevant to the current stage; extraction may be cached, but recheck affected content after input changes.
 
-正文不反复使用“课件中说”“老师讲过”“根据材料整理”，不默认逐条标注来源页码。不插入与知识无关的免责声明、押题提醒、编辑说明、制作过程或复习口号。真实的适用条件、假设、误差和方法局限必须保留。
+Judge importance using explicit teacher priorities, exam scope, course objectives, and knowledge dependencies—not length or frequency alone. Distinguish stated priorities from compiler predictions. Do not invent teacher intentions, likelihood percentages, or official answers. Do not transfer a particular course's five questions, twenty marks each, no calculations, or two-method requirements to other courses.
 
-必要的外部参考可集中列于末尾，具体引用按实际需要保留；不混淆外部补充与教师讲授。工作用来源映射放在内部记录中。用户明确要求原课件页码索引时再增加定位信息。
+For missing/conflicting materials or ambiguous key symbols, explain the concrete issue in conversation and ask how to proceed. Do not silently guess or leave unresolved “to verify” markers in the final document. Continue unaffected sections.
 
-## 排版与输出
+## Writing and organization
 
-进入排版阶段读取 [版式与导出](references/layout.md)。优先使用用户提供的模板或认可样稿；缺少样稿时使用其中的单栏默认方案。双栏仅在用户明确要求时采用。
+After confirming modes, read [Content and question writing](references/content.md) and execute only selected modes.
 
-按照指定格式执行，不强制同时交付多种格式。更新时保留原文件，生成清楚命名的新版本，除非用户授权覆盖；用户要求多种格式时同步内容与版本。
+Organize by course chapter or explicit priority modules. Name headings accurately and group related definitions, principles, conditions, formulas, examples, and comparisons. Preserve connections required for understanding and solving problems; do not reduce the material to conclusion-only outlines or substitute slide-by-slide copying for organization.
 
-## 成品检查
+Write professionally, coherently, and directly. Use paragraphs for conceptual answers, numbering for genuinely ordered steps, and tables for suitable comparisons. Bold key concepts, conditions, and conclusions selectively; do not bold entire paragraphs or number every sentence.
 
-- 对照材料与确认范围核验覆盖、事实、符号、条件、公式及例题；删除重复但不误删有效知识。
-- 核对试题与答案对应、分值深度、计算结果及选择题答案唯一性；没有依据不得声称答案官方或题目必考。
-- 核对层级、编号、目录、正文页码、交叉引用及关键词定位。
-- Word/PDF 必须尽可能实际渲染检查字体、公式角标、表格、图片、分页与空白；不能只检查源代码设置。
-- 检查最终交付位置的文件，不只检查临时版本。修改后重查受影响页及目录；存在全局重排时重查全文。
-- 区分静态审查、实际渲染和内容验证。无法进行的检查在交付消息中说明，不写进复习资料正文，也不声称完成。
+Do not repeatedly say “the slides say,” “the teacher covered,” or “compiled from the materials.” Do not add source pages to each item by default. Exclude unrelated disclaimers, prediction reminders, editing notes, production-process text, and revision slogans. Retain real applicability conditions, assumptions, errors, and limitations.
 
-交付文件及简短检查结果，不发布到外部仓库，除非用户明确要求。技能本身不依赖某个聊天历史、个人文件路径、模型或特定工具；按所在环境实际能力执行。
+Consolidate necessary external references at the end where appropriate, retaining specific citations when needed. Do not confuse external supplements with taught content. Keep source mappings internal. Add source-page navigation only when explicitly requested.
+
+## Layout and output
+
+When typesetting, read [Layout and export](references/layout.md) and [Fixed examples and shared template](references/style-examples.md). Inspect the selected mode's fixed PDF and content source, then implement the shared styles. References travel with the skill; do not depend on chat history or private file paths. User templates and approved samples take priority; otherwise use the single-column default. Use two columns only on explicit request.
+
+Deliver the requested format, not every format automatically. Preserve the original and save clearly named updates unless overwriting is authorized. Synchronize content and versions when multiple formats are requested.
+
+## Content verification and optional collaboration
+
+For coverage review, question-based checks, computational verification, or splitting long materials, follow [Quality checks and optional collaboration](references/quality.md). Findings support revision and internal tracking, not changes to purpose, content permissions, or layout. Subagents are optional.
+
+## Deliverable checks
+
+- Compare with materials and confirmed scope for coverage, facts, notation, conditions, formulas, and examples. Remove repetition without removing useful knowledge.
+- Check question/answer correspondence, depth relative to marks, calculations, and answer uniqueness in multiple-choice questions. Do not call answers official or questions certain to appear without evidence.
+- Check hierarchy, numbering, contents, printed pages, cross-references, and keyword lookup.
+- Whenever possible, actually render Word/PDF to inspect fonts, mathematical indices, tables, images, pagination, and whitespace. Source settings alone are insufficient.
+- Verify final delivered files, not just temporary versions. After edits, recheck affected pages and contents; global reflow requires a full-document check.
+- Distinguish static review, actual rendering, and content verification. Report unavailable checks in delivery notes, not the document body; never claim they were completed.
+
+Deliver files and a brief verification summary. Do not publish externally unless explicitly requested. The skill does not depend on another chat, private paths, a model, or a particular tool; operate within actual environment capabilities.
