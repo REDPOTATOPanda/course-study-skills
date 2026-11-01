@@ -6,7 +6,7 @@
 
 Course Study Skills provides three independent Agent Skills for turning slides, class notes, and supplementary handouts into course notes, textbook-style handouts, or exam-review materials.
 
-**[Download all skills](https://github.com/REDPOTATOPanda/course-study-skills/raw/refs/heads/main/downloads/course-study-skills.zip)** · **[Choose a skill](#choose-a-skill)** · **[View examples](#exam-review-examples)**
+**[Download all skills](https://github.com/REDPOTATOPanda/course-study-skills/releases/latest/download/course-study-skills.zip)** · **[Choose a skill](#choose-a-skill)** · **[View examples](#exam-review-examples)**
 
 ## Sound familiar?
 
@@ -100,7 +100,7 @@ Confirm modes, scope, and output requirements before writing. Default to compact
 
 ### 1. Download and install
 
-Get individual skills from the [download directory](downloads/README.md), or download the full collection.
+Get individual skills from the [latest release](https://github.com/REDPOTATOPanda/course-study-skills/releases/latest), or download the full collection.
 
 Unzip and install complete skill folders in a location supported by your agent, or use its skill import feature. Preserve `SKILL.md`, `references/`, `assets/`, `scripts/`, and other supporting resources.
 
